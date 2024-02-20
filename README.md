@@ -183,7 +183,7 @@ For example:
 x = 42
 y = x
 ```
-
+🐍 - psst hey ! I'm a python don't worry i dont bite :3
 #### :gear: Python Compiler Behind the Scenes
 
 Python is an interpreted language, which means it does not require compilation into machine code before execution. Instead, Python code is executed line by line by the Python interpreter. The process involves several steps:
@@ -229,7 +229,7 @@ For CPU-intensive tasks, Python provides libraries like NumPy for efficient nume
 
 ---
 
-## Understanding Python Code Execution
+## 🧰 Understanding Python Code Execution
 
 ### 1. Source Code:
 - Write Python code in a text editor or IDE.
@@ -267,7 +267,7 @@ By going through these phases, Python code is transformed into actions executed 
 
 ---
 
-## :raising_hand: Contributions Welcome
+## 🙋🏼‍♀️ Contributions Welcome
 We welcome and appreciate contributions from the community. If you have ideas for improvements, bug fixes, or new content, here's how you can contribute:
 
 1. **Fork the Repository:**
