@@ -99,14 +99,10 @@ Join our community and stay connected. Feel free to ask questions, share your ex
 ---
 
 
-
-## :grey_question: What is Python
-<!-- Add information about Python. -->
-
-### :memo: What is Python?
+## :memo: What is Python?
 Python is a high-level, interpreted, and general-purpose programming language. It was created by Guido van Rossum and first released in 1991. Python's design philosophy prioritizes code readability and ease of use, and its syntax allows programmers to express concepts in fewer lines of code than languages like C++ or Java. Python supports multiple programming paradigms, including procedural, object-oriented, and functional programming.
 
-### :computer: Why Python?
+## :computer: Why Python?
 
 Python has gained immense popularity for several reasons:
 
@@ -117,7 +113,7 @@ Python has gained immense popularity for several reasons:
 - **High Demand in Industry:** Python is widely used in various industries, including web development, data science, artificial intelligence, machine learning, and more.
 - **Open Source:** Python is open-source, encouraging collaboration and continuous improvement.
 
-### :key: Key Applications
+## :key: Key Applications
 Python is used in various domains and applications, including:
 
 - **Web Development:** Frameworks like Django and Flask make it easy to build scalable and maintainable web applications.
@@ -128,7 +124,7 @@ Python is used in various domains and applications, including:
 - **Game Development:** Python is used in game development, with libraries like Pygame providing a foundation for creating games.
 
 
-### :rocket: How Python Works?
+## :rocket: How Python Works?
 Python is an interpreted language, meaning that the Python code is executed line by line by the Python interpreter. Here's a brief overview of how Python works:
 
 - **Source Code:** Python programs are written in plain text files with a `.py` extension.
@@ -143,10 +139,10 @@ Python is an interpreted language, meaning that the Python code is executed line
 ## :memo: Syntax
 Python syntax is designed to be clear and readable. Here are some fundamental syntax elements:
 
-#### Variables
+### Variables
 <!-- Add information about variables in Python. -->
 
-#### :label: Variables
+### :label: Variables
 In Python, variables are used to store and represent data. Unlike statically-typed languages, Python is dynamically typed, meaning that the type of a variable is determined at runtime.
 
 ```py
@@ -163,7 +159,7 @@ x, y, z = 1, 2, 3
 ```
 
 
-#### :point_right: Pointers in Python
+### :point_right: Pointers in Python
 
 In Python, you don't explicitly work with pointers like in languages such as C or C++. However, behind the scenes, everything in Python is an object, and variables hold references to these objects.
 
@@ -174,7 +170,7 @@ x = 42
 y = x
 ```
 🐍 - psst hey ! I'm a python don't worry i dont bite :3
-#### :gear: Python Compiler Behind the Scenes
+### :gear: Python Compiler Behind the Scenes
 
 Python is an interpreted language, which means it does not require compilation into machine code before execution. Instead, Python code is executed line by line by the Python interpreter. The process involves several steps:
 
@@ -190,7 +186,7 @@ Python is an interpreted language, which means it does not require compilation i
 
 This process allows Python code to be highly portable across different platforms, as the bytecode can be executed on any system with a compatible Python interpreter.
 
-#### :file_cabinet: Memory Management in Python
+### :file_cabinet: Memory Management in Python
 
 Python uses an automatic memory management system, commonly known as garbage collection. Key aspects of Python memory management include:
 
@@ -204,12 +200,12 @@ Python uses an automatic memory management system, commonly known as garbage col
 
 Python abstracts away low-level memory management details, making it easier for developers to focus on writing code without manually managing memory allocation and deallocation.
 
+---
+
+## Kernel Mode and CPU Handling
 
 
-### Kernel Mode and CPU Handling
-
-
-#### :computer: Kernel Mode and CPU Handling in Python
+### :computer: Kernel Mode and CPU Handling in Python
 
 Python, as a high-level language, abstracts away low-level operating system details. Directly switching kernel modes or handling CPUs at a low level is typically not done in Python.
 
@@ -294,7 +290,7 @@ Go to your fork on GitHub. Before providing a clear title and description for yo
 
 ---
 
-### :book: References
+## :book: References
 
 - [Dr. Angela Yu's Python Programming Course](https://www.udemy.com/course/100-days-of-code/?kw=100+days+of+python&src=sac&couponCode=KEEPLEARNING)
   - Enhance your Python skills with Dr. Angela Yu's comprehensive Python Programming Course on Udemy. Dr. Angela Yu is a highly respected instructor known for her engaging teaching style and thorough coverage of programming concepts.
