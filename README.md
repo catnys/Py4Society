@@ -274,7 +274,7 @@ git checkout -b feature/new-feature
 Make your desired changes in the code or add new content. Ensure that your contributions align with the repository's purpose.
 
 5. **Commit Changes:**
-Please note that including your branch id and number (e.g Problem-032) at the beginning of the commit message would be appreciated more 
+Please note that including your branch id and number (e.g Day-12) at the beginning of the commit message would be appreciated more 
 ```bash
 git add .
 git commit -m "Your-Branch: Add your meaningful commit message here"
