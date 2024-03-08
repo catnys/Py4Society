@@ -133,5 +133,5 @@ my_array = array('i', [1, 2, 3, 4, 5])
 
 In this example, `array('i', [1, 2, 3, 4, 5])` creates an array of integers `('i')`.
 
-In summary, Python lists are versatile and widely used for storing collections of items including randomization and various libraries, and while there is an array module available, lists are generally preferred for their flexibility and rich set of features.
+To summarize, Python lists are versatile and widely used for storing collections of items including randomization and various libraries, and while there is an array module available, lists are generally preferred for their flexibility and rich set of features.
 
