@@ -49,7 +49,6 @@
 13. [References](#book-references)
 
 ---
----
 
 ## :pushpin: **Checklist**
 - [x] 📦What is Python
