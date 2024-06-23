@@ -1,4 +1,4 @@
-names = names_string.split(", ")
+names = names_string.split(", ") # type: ignore
 
 import random
 
