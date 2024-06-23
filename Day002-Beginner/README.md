@@ -1,3 +1,5 @@
+# `Day 2 - Beginner`
+
 # Understanding Data Types and Variables in Python
 ## Introduction
 

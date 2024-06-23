@@ -1,4 +1,5 @@
-# Day 1 - Beginner
+# `Day 1 - Beginner`
+
 <!-- Table of Contents -->
 ## Table of Contents
 
