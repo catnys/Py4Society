@@ -76,3 +76,105 @@ three_d_list = [
 ]
 print(three_d_list)
 ```
+
+
+---
+
+# ⭐️✨🌸 ⭐️✨🌸 ⭐️✨🌸 ⭐️✨🌸 ⭐️✨🌸 
+
+---
+
+
+# 📚 Dictionaries
+
+## Introduction to Python Dictionaries
+
+Python dictionaries are data structures that store data in key-value pairs. Each key is connected to a value, allowing for efficient data retrieval by key rather than by index, making dictionaries ideal for situations where item lookup and data organization are paramount.
+
+## Implementation of Dictionaries
+
+Dictionaries in Python are created using curly braces `{}` with pairs separated by commas, and each key and value separated by a colon `:`.
+
+### Creating a Dictionary
+
+```python
+my_dict = {"name": "John", "age": 30, "city": "New York"}
+```
+
+### Adding and Updating Entries
+
+```python
+my_dict["email"] = "john@example.com"  # Adds a new key-value pair
+my_dict["age"] = 31  # Updates the value for the key "age"
+```
+
+### Removing Entries
+
+```python
+del my_dict["age"]  # Removes the entry with the key "age"
+my_dict.pop("city")  # Removes the entry with the key "city" and returns its value
+```
+
+## Dictionary Operations Examples
+
+### Example 1: Basic Operations
+
+```python
+# Define a dictionary
+person = {"name": "Alice", "profession": "Engineer"}
+
+# Access elements
+profession = person["profession"]
+
+# Update elements
+person["profession"] = "Designer"
+
+# Print updated dictionary
+print(person)
+```
+
+### Example 2: Iterating Over a Dictionary
+
+```python
+# Define a dictionary
+data = {"a": 1, "b": 2, "c": 3}
+
+# Iterate over keys and values
+for key, value in data.items():
+    print(f"Key: {key}, Value: {value}")
+```
+
+### Example 3: Dictionary Comprehensions
+
+```python
+# Create a dictionary with keys as integers and values as squares of the keys
+squares = {x: x*x for x in range(6)}
+print(squares)
+```
+
+### Example 4: Nested Dictionaries
+
+```python
+# Define a nested dictionary
+users = {
+    "user1": {"name": "Mark", "age": 25},
+    "user2": {"name": "Katy", "age": 28}
+}
+
+# Access data from the nested dictionary
+print(users["user1"]["name"])
+```
+
+## Keep-In-Mind Questions
+
+1. **What are dictionaries in Python?**
+   - Dictionaries are collections of items that are unordered and indexed by keys.
+
+2. **How do you retrieve a value from a dictionary?**
+   - You can retrieve a value from a dictionary by using its key: `dictionary[key]`.
+
+3. **Can a Python dictionary store multiple data types?**
+   - Yes, both keys and values in a Python dictionary can be of any data type.
+
+4. **What will happen if you try to access a key that does not exist in the dictionary?**
+   - Python will raise a `KeyError` unless you use the `get` method, which returns `None` if the key is not found.
