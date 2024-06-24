@@ -178,3 +178,10 @@ print(users["user1"]["name"])
 
 4. **What will happen if you try to access a key that does not exist in the dictionary?**
    - Python will raise a `KeyError` unless you use the `get` method, which returns `None` if the key is not found.
+
+## Differences Between Python Dictionaries and Hash Tables
+1. Abstraction Level: Python dictionaries are a high-level abstraction of hash tables. While you interact directly with dictionaries in Python, hash tables are often used behind the scenes to implement dictionaries in many programming languages, including Python.
+
+2. Data Structure Type: In Python, dictionaries are recognized as a built-in data type, while hash tables are generally a concept used in the implementation of dictionaries and other data structures.
+
+3. Usage: Dictionaries in Python are used directly in programs to handle data. In contrast, hash tables are usually more of a theoretical model for how dictionaries could be implemented to ensure maximum efficiency.
