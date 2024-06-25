@@ -1,7 +1,7 @@
 # `Day 12 - Beginner`
 # `REVISION`
 
-# `REVISION` : Functions Parameters and Return Types
+# Functions Parameters and Return Types
 
 ## Introduction to Functions
 In Python, a function is a block of code that only runs when it is called. You can pass data, known as parameters, into a function. A function can return data as a result.
