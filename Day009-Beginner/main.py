@@ -1,5 +1,4 @@
 import art
-import os
 
 # Define global people dictionary
 people = []
@@ -26,7 +25,7 @@ def getUserInfo():
         print(f"{name} has {bid} bid. You have {others} others.")
         myDictionary = {'name': name, 'bid': bid}
         people.append(myDictionary)
-        os.system('clear')
+
 
 
 def findMax(people):
@@ -42,16 +41,8 @@ def findMax(people):
 
 
 def main():
-    # showLogo()
-    # getUserInfo()
-    people = [
-        {'name': "Alice", 'bid': 100},
-        {'name': "Bob", 'bid': 200},
-        {'name': "John", 'bid': 300},
-        {'name': "Sarah", 'bid': 800},
-        {'name': "David", 'bid': 400},
-    ]
-    # print(people)
+    showLogo()
+    getUserInfo()
     findMax(people)
 
 
