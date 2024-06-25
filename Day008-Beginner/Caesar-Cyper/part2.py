@@ -1,7 +1,7 @@
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
 direction = 'decrypt' #input("Type 'encode' to encrypt, type 'decode' to decrypt:\n")
-text = 'civilization' # input("Type your message:\n").lower()
+text = 'hello' # input("Type your message:\n").lower()
 shift = 5 # int(input("Type the shift number:\n"))
 
 def encrypt(text, shift):
@@ -24,13 +24,21 @@ def decrypt(text, shift):
     #shift = 5
     #plain_text = "hello"
     #print output: "The decoded text is hello"
+    for letter in text:
+        index = int(alphabet.index(letter))
+        newIndex = (index - shift) % len(alphabet)
+        decrypt_text += alphabet[newIndex]
+
+    print(decrypt_text)
+    return decrypt_text
 
 
-#TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'drection' variable. You should be able to test the code to encrypt *AND* decrypt a message.
+#TODO-3: Check if the user wanted to encrypt or decrypt the message by checking the 'direction' variable. Then call the correct function based on that 'direction' variable. You should be able to test the code to encrypt *AND* decrypt a message.
 
 
 def main():
-    encrypt(text,shift)
+    encrypted_text = encrypt(text,shift)
+    decrypted_text = decrypt(encrypted_text,shift)
 
 #TODO-3: Call the encrypt function and pass in the user inputs. You should be able to test the code and encrypt a message.
 
