@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change afterPath="$PROJECT_DIR$/Day014-Beginner/art.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Day014-Beginner/gamedata.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day014-Beginner/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +111,7 @@
       <updated>1719308559604</updated>
       <workItem from="1719308561170" duration="538000" />
       <workItem from="1719309100548" duration="355000" />
-      <workItem from="1719309462424" duration="15187000" />
+      <workItem from="1719309462424" duration="15211000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
