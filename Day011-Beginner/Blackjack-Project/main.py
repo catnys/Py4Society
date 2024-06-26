@@ -1,6 +1,5 @@
 ############### Blackjack Project #####################
 import random
-# import os
 from art import logo
 
 ############### Our Blackjack House Rules #####################
