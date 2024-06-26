@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin" />
+    <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day011-Beginner/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day011-Beginner/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +59,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day011-Beginner/Blackjack-Project" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Py4Society" />
@@ -104,7 +112,7 @@
       <updated>1719308559604</updated>
       <workItem from="1719308561170" duration="538000" />
       <workItem from="1719309100548" duration="355000" />
-      <workItem from="1719309462424" duration="14239000" />
+      <workItem from="1719309462424" duration="14758000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />

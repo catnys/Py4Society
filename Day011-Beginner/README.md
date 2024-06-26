@@ -1,5 +1,18 @@
 # `Day 11 - Beginner`
 
+# Project: `Blackjack Game`
+
+## Overview
+This Python-based Blackjack game allows players to compete against a computer dealer. The game adheres to standard Blackjack rules, where the objective is to achieve a score of 21 or as close as possible without going over.
+
+## Features
+- Unlimited deck size without jokers.
+- Ace values are dynamically counted as 1 or 11.
+- Simple command-line interface for easy gameplay.
+- Dealer plays automatically with a minimum score rule of 17.
+
+---
+
 # Scopes: Global vs Local
 
 Understanding scopes in Python is crucial for effective programming, especially when it comes to managing variable visibility and lifecycle across different parts of your code. This guide explores the differences between global and local scopes and how they influence variable behavior in Python.
