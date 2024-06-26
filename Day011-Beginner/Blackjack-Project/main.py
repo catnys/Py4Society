@@ -18,36 +18,36 @@ from art import logo
 
 ###############################################################
 
+userCards = []
+computerCards = []
 
 def getRandomCard():
+    """Returns a random card from the deck."""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     return random.choice(cards)
 
 
-userCards = []
-computerCards = []
 
 
 def calculateScore(cards):
-    score = 0
-    for card in cards:
-        score += card
-
-    if score == 21 and len(cards) == 2:
-        return 0
-    elif 11 in cards and score > 21:
-        cards.remove(11)
-        cards.append(1)
-
-    return int(score)
+    """Calculates and returns the score considering Blackjack rules."""
+    score = sum(cards)
+    # Adjust for the Ace being 1 or 11
+    if 11 in cards and score > 21:
+        return score - 10
+    return score
 
 
 def compare(userScore, computerScore):
-    if userScore < 21:
-        if userScore == 0 or userScore > computerScore:
-            print("You win!")
-    else:
+    """Compares user and computer scores and prints the outcome."""
+    if userScore > 21:
+        print("Bust! You lose.")
+    elif computerScore > 21 or userScore > computerScore:
+        print("You win!")
+    elif userScore < computerScore:
         print("You lose!")
+    else:
+        print("It's a tie!")
 
 
 def makeEmptyLists(userCards, computerCards):
