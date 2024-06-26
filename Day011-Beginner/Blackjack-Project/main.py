@@ -55,51 +55,49 @@ def makeEmptyLists(userCards, computerCards):
     computerCards.clear()
 
 
-def main():
-    isOver = False
 
-    while True:
-        print(logo)
-        print("Welcome to Blackjack Game!")
+def playBlackjack():
+    """Main function to handle the game operations."""
+    print(logo)
+    print("Welcome to Blackjack Game!")
+    userCards, computerCards = [], []
+    gameOver = False
 
-        # give user and computer 2 random cards first
-        userCards.append(getRandomCard())
-        userCards.append(getRandomCard())
-        computerCards.append(getRandomCard())
-        computerCards.append(getRandomCard())
+    userCards.extend([getRandomCard(), getRandomCard()])
+    computerCards.extend([getRandomCard(), getRandomCard()])
+
+    while not gameOver:
         userScore = calculateScore(userCards)
         computerScore = calculateScore(computerCards)
+        print(f"Your cards: {userCards}, score: {userScore}")
+        print(f"Computer's first card: {computerCards[0]}")
 
-        while not isOver:
-            print(f" Your cards: {userCards}, current score: {calculateScore(userCards)}")
-            print(f"Computer cards: {computerCards[0]}")
-
-            # Check for Blackjack or score over 21
-            if computerScore >= 21 or userScore >= 21:
-                isOver = True
-            else:
-                # User decides to get another card
-                if input("Type 'y' to get another card, any other key to pass: ").lower() == 'y':
-                    randomCard = getRandomCard()
-                    userCards.append(randomCard)
-                    userScore += randomCard
-                else:
-                    isOver = True
-
-            if computerScore < 17:
-                randomCard = getRandomCard()
-                computerCards.append(randomCard)
-                computerScore += randomCard
-
-        print(
-            f"Your final score: {calculateScore(userCards)} and computer final score: {calculateScore(computerCards)}")
-        compare(userScore, computerScore)
-        makeEmptyLists(userCards, computerCards)
-        if input("Would you like to play again? (y or n): ").lower() == 'y':
-            isOver = False
-            # os.system("clear") # for windows --> "cls"
+        # Check for Blackjack or score over 21
+        if computerScore >= 21 or userScore >= 21:
+            gameOver = True
         else:
+            # User decides to get another card
+            if input("Type 'y' to get another card, any other key to pass: ").lower() == 'y':
+                userCards.append(getRandomCard())
+            else:
+                gameOver = True
+
+        if computerScore < 17:
+            computerCards.append(getRandomCard())
+
+        print("--------------------")
+
+    print(f"Computer's final hand: {computerCards}, final score: {computerScore}")
+    compare(userScore, computerScore)
+
+
+
+def main():
+    while True:
+        playBlackjack()
+        if input("Do you want to play another game of Blackjack? Type 'y' for yes, 'n' for no: ").lower() != 'y':
             break
+
 
 
 if __name__ == '__main__':
