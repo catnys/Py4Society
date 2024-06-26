@@ -107,7 +107,7 @@
       <updated>1719308559604</updated>
       <workItem from="1719308561170" duration="538000" />
       <workItem from="1719309100548" duration="355000" />
-      <workItem from="1719309462424" duration="13021000" />
+      <workItem from="1719309462424" duration="13162000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
@@ -132,7 +132,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Day011-Beginner/Blackjack-Project/main.py</url>
-          <line>100</line>
+          <line>56</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
