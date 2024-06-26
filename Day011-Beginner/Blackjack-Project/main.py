@@ -1,6 +1,8 @@
 ############### Blackjack Project #####################
 import random
+# import os
 from art import logo
+
 
 
 #Difficulty Normal 😎: Use all Hints below to complete the project.
@@ -69,7 +71,7 @@ def calculateScore(cards):
         cards.remove(11)
         cards.append(1)
 
-    return score
+    return int(score)
 
 
 #Hint 10: If the game has not ended, ask the user if they want to draw another card. If yes, then use the deal_card() function to add another card to the user_cards List. If no, then the game has ended.
@@ -87,6 +89,10 @@ def compare(userScore, computerScore):
     else:
         print("You lose!")
 
+
+def makeEmptyLists(userCards, computerCards):
+    userCards.clear()
+    computerCards.clear()
 
 #Hint 14: Ask the user if they want to restart the game. If they answer yes, clear the console and start a new game of blackjack and show the logo from art.py.
 
@@ -118,18 +124,25 @@ def main():
             else:
                 # User decides to get another card
                 if input("Type 'y' to get another card, any other key to pass: ").lower() == 'y':
-                    userCards.append(getRandomCard())
+                    randomCard = getRandomCard()
+                    userCards.append(randomCard)
+                    userScore += randomCard
                 else:
                     isOver = True
 
 
             if computerScore < 17:
-                computerCards.append(getRandomCard())
-                computerScore = calculateScore(computerCards)
+                randomCard = getRandomCard()
+                computerCards.append(randomCard)
+                computerScore += randomCard
 
-
+        print(f"Your final score: {calculateScore(userCards)} and computer final score: {calculateScore(computerCards)}")
         compare(userScore, computerScore)
-        if input("Would you like to play again? (y or n): ").lower() != 'y':
+        makeEmptyLists(userCards, computerCards)
+        if input("Would you like to play again? (y or n): ").lower() == 'y':
+            isOver = False
+            # os.system("clear") # for windows --> "cls"
+        else:
             break
 
 
