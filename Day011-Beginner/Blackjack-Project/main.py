@@ -3,7 +3,6 @@ import random
 # import os
 from art import logo
 
-
 ############### Our Blackjack House Rules #####################
 
 ## The deck is unlimited in size.
@@ -21,12 +20,11 @@ from art import logo
 userCards = []
 computerCards = []
 
+
 def getRandomCard():
     """Returns a random card from the deck."""
     cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
     return random.choice(cards)
-
-
 
 
 def calculateScore(cards):
@@ -53,7 +51,6 @@ def compare(userScore, computerScore):
 def makeEmptyLists(userCards, computerCards):
     userCards.clear()
     computerCards.clear()
-
 
 
 def playBlackjack():
@@ -91,13 +88,11 @@ def playBlackjack():
     compare(userScore, computerScore)
 
 
-
 def main():
     while True:
         playBlackjack()
         if input("Do you want to play another game of Blackjack? Type 'y' for yes, 'n' for no: ").lower() != 'y':
             break
-
 
 
 if __name__ == '__main__':
