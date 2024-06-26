@@ -3,6 +3,7 @@ import random
 # import os
 from art import logo
 
+
 ############### Our Blackjack House Rules #####################
 
 ## The deck is unlimited in size.
@@ -23,7 +24,6 @@ def getRandomCard():
     return random.choice(cards)
 
 
-#Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
 userCards = []
 computerCards = []
 
@@ -41,6 +41,7 @@ def calculateScore(cards):
 
     return int(score)
 
+
 def compare(userScore, computerScore):
     if userScore < 21:
         if userScore == 0 or userScore > computerScore:
@@ -52,6 +53,7 @@ def compare(userScore, computerScore):
 def makeEmptyLists(userCards, computerCards):
     userCards.clear()
     computerCards.clear()
+
 
 def main():
     isOver = False
@@ -67,8 +69,6 @@ def main():
         computerCards.append(getRandomCard())
         userScore = calculateScore(userCards)
         computerScore = calculateScore(computerCards)
-
-
 
         while not isOver:
             print(f" Your cards: {userCards}, current score: {calculateScore(userCards)}")
@@ -86,13 +86,13 @@ def main():
                 else:
                     isOver = True
 
-
             if computerScore < 17:
                 randomCard = getRandomCard()
                 computerCards.append(randomCard)
                 computerScore += randomCard
 
-        print(f"Your final score: {calculateScore(userCards)} and computer final score: {calculateScore(computerCards)}")
+        print(
+            f"Your final score: {calculateScore(userCards)} and computer final score: {calculateScore(computerCards)}")
         compare(userScore, computerScore)
         makeEmptyLists(userCards, computerCards)
         if input("Would you like to play again? (y or n): ").lower() == 'y':
@@ -100,7 +100,6 @@ def main():
             # os.system("clear") # for windows --> "cls"
         else:
             break
-
 
 
 if __name__ == '__main__':
