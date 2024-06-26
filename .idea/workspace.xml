@@ -107,7 +107,7 @@
       <updated>1719308559604</updated>
       <workItem from="1719308561170" duration="538000" />
       <workItem from="1719309100548" duration="355000" />
-      <workItem from="1719309462424" duration="10231000" />
+      <workItem from="1719309462424" duration="11462000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
@@ -127,8 +127,19 @@
     <MESSAGE value="pull from origin" />
     <option name="LAST_COMMIT_MESSAGE" value="pull from origin" />
   </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Day011-Beginner/Blackjack-Project/main.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1719431124404" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day011-Beginner/Blackjack-Project" />
+    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1719432350028" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day011-Beginner/Blackjack-Project" />
     <SUITE FILE_PATH="coverage/Py4Society$part2.coverage" NAME="part2 Coverage Results" MODIFIED="1719310145252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
     <SUITE FILE_PATH="coverage/Py4Society$part3.coverage" NAME="part3 Coverage Results" MODIFIED="1719312829895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
   </component>

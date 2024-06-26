@@ -44,8 +44,8 @@ def getRandomCard():
 
 
 #Hint 5: Deal the user and computer 2 cards each using deal_card() and append().
-user_cards = []
-computer_cards = []
+userCards = []
+computerCards = []
 
 
 #Hint 6: Create a function called calculate_score() that takes a List of cards as input
@@ -84,7 +84,6 @@ def compare(userScore, computerScore):
     if userScore < 21:
         if userScore == 0 or userScore > computerScore:
             print("You win!")
-
     else:
         print("You lose!")
 
@@ -94,40 +93,45 @@ def compare(userScore, computerScore):
 
 def main():
     isOver = False
-    again = False
-    while again:
+
+    while True:
         print(logo)
         print("Welcome to Blackjack Game!")
 
         # give user and computer 2 random cards first
-        user_cards.append(getRandomCard())
-        user_cards.append(getRandomCard())
-        computer_cards.append(getRandomCard())
-        computer_cards.append(getRandomCard())
-        userScore = calculateScore(user_cards)
-        computerScore = calculateScore(computer_cards)
+        userCards.append(getRandomCard())
+        userCards.append(getRandomCard())
+        computerCards.append(getRandomCard())
+        computerCards.append(getRandomCard())
+        userScore = calculateScore(userCards)
+        computerScore = calculateScore(computerCards)
+
+
 
         while not isOver:
-            print(f" Your cards: {user_cards}, current score: {calculateScore(user_cards)}")
-            print(f"Computer cards: {computer_cards[0]}")
+            print(f" Your cards: {userCards}, current score: {calculateScore(userCards)}")
+            print(f"Computer cards: {computerCards[0]}")
 
-            if userScore == 0 or computerScore == 0 or userScore > 21 or computerScore > 21:
+            # Check for Blackjack or score over 21
+            if computerScore >= 21 or userScore >= 21:
                 isOver = True
+            else:
+                # User decides to get another card
+                if input("Type 'y' to get another card, any other key to pass: ").lower() == 'y':
+                    userCards.append(getRandomCard())
+                else:
+                    isOver = True
+
 
             if computerScore < 17:
-                computer_cards.append(getRandomCard())
-                computerScore = calculateScore(computer_cards)
+                computerCards.append(getRandomCard())
+                computerScore = calculateScore(computerCards)
 
-            if compare(userScore, computerScore) == True:
-                isOver = True
 
         compare(userScore, computerScore)
-        print("Would you like to play again? (yes or no)")
-        again = input()
-        if again.lower() == "yes":
-            again = True
-        else:
-            again = False
+        if input("Would you like to play again? (y or n): ").lower() != 'y':
+            break
+
 
 
 if __name__ == '__main__':
