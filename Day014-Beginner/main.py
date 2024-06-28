@@ -20,6 +20,8 @@ def createUser():
     return User(username, password)
 
 
+
+
 def playGame():
     """Main function to handle the game operations."""
     isOver = False
