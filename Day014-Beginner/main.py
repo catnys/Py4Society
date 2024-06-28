@@ -21,7 +21,7 @@ def createUser():
     return User(username, password)
 
 
-def saveUser(user, filename):
+def saveUser(user, filename, userlist):
     """Save user to the credentials.txt file"""
     mode = 'w' # set more to write initially
     # Check if the file exists
@@ -31,22 +31,51 @@ def saveUser(user, filename):
         mode = 'a'
 
     with open(filename, mode) as file:
-        file.write(str(user) + "\n")
+        for person in userlist:
+            if user.username == person.username:
+                file.write(str(user) + "\n")
+        else:
+            print("User already exists")
 
 
 def loadUser(filename):
     """Load the user from credentials.txt"""
 
+    # Initialize an empty dictionary to store the user data
+    users = []
+
     try:
         with open(filename, 'r') as file:
-            lines = file.read().splitlines()
-            print(lines)
+            lines = file.readlines()
+            for line in lines:
+                # Split the line into parts: username, password, and score
+                parts = line.split(',')
+                username = parts[0].strip()
+                password = parts[1]
+                score = int(parts[2])
+
+                # Add the user data to the dictionary
+                users.append(User(username, password, score))
     except FileNotFoundError:
         print(f"The file {filename} does not exist.")
     except Exception as e:
         print(f"An error occurred: {e}")
 
+    return users
 
+
+def printUser(users):
+    """Print the users list"""
+    for user in users:
+        print(f"{user.username}: {user.password} - {user.score}")
+
+def isUserExist(filename,userlist,username):
+    """Check whether a username exists"""
+
+    for user in userlist:
+        if user.username == username:
+            return True
+    return False
 
 def playGame():
     """Main function to handle the game operations."""
@@ -81,14 +110,20 @@ def playGame():
 
 def main():
     fileName = "credentials.txt"
-    user1 = User("Kimberly", "password")
+
+    """user1 = User("Kimberly", "password")
     print(user1)
     saveUser(user1, fileName)
-    saveUser(User("Kevin", "asd123 "), fileName)
+    
     saveUser(User("John", "Doe"), fileName)
     saveUser(User("Avis", "123123."),fileName)
+    """
 
-    loadUser(fileName)
+    users = loadUser(fileName)
+    printUser(users)
+    saveUser(User("Kevin", "asd123 "), fileName,users)
+
+    print(isUserExist(fileName,users, "Avis"))
 
     """
     while True:
