@@ -10,8 +10,7 @@ def displayGameData(list):
 
 def pickRandomData():
     element = random.choice(data)
-    quest = f"{element['name']}, a {element['description']}, from {element['country']}"
-    return quest
+    return element
 
 
 
@@ -23,18 +22,27 @@ def playGame():
         print(logo)
         questA = pickRandomData()
         questB = pickRandomData()
-        print(f"Compare A : {questA}")
+        print(f"Compare A : {questA['name']}, a {questA['description']}, from {questA['country']} (check : {questA['follower_count']})")
         print(vs)
-        print(f"Agains B: {questB}")
-        answer = input("Who has more followers? Type 'A' or 'B':")
+        print(f"Agains B: {questB['name']}, a {questB['description']}, from {questB['country']} (check : {questB['follower_count']})")
+        answer = str(input("Who has more followers? Type 'A' or 'B':"))
 
         if questA['follower_count'] > questB['follower_count']:
             if answer == 'A':
                 score += 1
+            else:
+                score -= 1
         else:
             if answer == 'B':
                 score += 1
+            else:
+                score -= 1
 
+        if score < 0:
+            print(f"Sorry {questA['name']}, you lose {questB['name']}")
+            isOver = True
+        else:
+            print(f"\nYour score is {score}\n")
 
 
 
