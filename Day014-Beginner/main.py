@@ -13,6 +13,11 @@ def pickRandomData():
     return element
 
 
+def getUserCredentials():
+    username = input("Please enter your username: ")
+    password = input("Please enter your password: ")
+    return username, password
+
 
 def playGame():
     """Main function to handle the game operations."""
