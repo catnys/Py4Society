@@ -1,5 +1,6 @@
 class User:
     def __init__(self, username, password):
+        """Self constructor for the user."""
         self.username = username
         self.password = password  # Note: Storing plain text passwords is not secure.
 

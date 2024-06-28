@@ -1,4 +1,5 @@
 import random
+from user import User
 from art import logo, vs
 from gamedata import data
 
@@ -13,10 +14,10 @@ def pickRandomData():
     return element
 
 
-def getUserCredentials():
+def createUser():
     username = input("Please enter your username: ")
     password = input("Please enter your password: ")
-    return username, password
+    return User(username, password)
 
 
 def playGame():
