@@ -22,7 +22,7 @@ def createUser():
 
 
 def saveUser(user, filename):
-    """Save or update a user's score in credentials.txt."""
+    """Save user to the credentials.txt file"""
     mode = 'w' # set more to write initially
     # Check if the file exists
     if os.path.exists(filename):
@@ -32,6 +32,19 @@ def saveUser(user, filename):
 
     with open(filename, mode) as file:
         file.write(str(user) + "\n")
+
+
+def loadUser(filename):
+    """Load the user from credentials.txt"""
+
+    try:
+        with open(filename, 'r') as file:
+            lines = file.read().splitlines()
+            print(lines)
+    except FileNotFoundError:
+        print(f"The file {filename} does not exist.")
+    except Exception as e:
+        print(f"An error occurred: {e}")
 
 
 
@@ -68,9 +81,14 @@ def playGame():
 
 def main():
     fileName = "credentials.txt"
-    user1 = User("Kimberly", "K1mberly3")
+    user1 = User("Kimberly", "password")
     print(user1)
     saveUser(user1, fileName)
+    saveUser(User("Kevin", "asd123 "), fileName)
+    saveUser(User("John", "Doe"), fileName)
+    saveUser(User("Avis", "123123."),fileName)
+
+    loadUser(fileName)
 
     """
     while True:
