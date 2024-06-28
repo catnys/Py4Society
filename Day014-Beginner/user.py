@@ -3,7 +3,7 @@ class User:
         """Constructor for the User class with an optional score parameter."""
         self.username = username
         self.score = score
-        self.password = password  # Note: Storing plain text passwords is not secure.
+        self.password = password
 
     def getUsername(self):
         """Getter for the username."""
