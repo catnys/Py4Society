@@ -23,19 +23,15 @@ def createUser():
 
 def saveUser(user, filename, userlist):
     """Save user to the credentials.txt file"""
-    mode = 'w' # set more to write initially
+    mode = 'w'  # set more to write initially
     # Check if the file exists
     if os.path.exists(filename):
         # file exist, so open w/ append mode as 'a'
         # set the mode as 'a'
         mode = 'a'
-
-    with open(filename, mode) as file:
-        for person in userlist:
-            if user.username == person.username:
-                file.write(str(user) + "\n")
-        else:
-            print("User already exists")
+    if not findUserByName(userlist, user.username):
+        with open(filename, mode) as file:
+            file.write(str(user) + "\n")
 
 
 def loadUser(filename):
@@ -64,12 +60,20 @@ def loadUser(filename):
     return users
 
 
+def updateUsers(filename, users):
+    """Update the user in the credentials.txt file"""
+    with open(filename, 'w') as file:
+        for user in users:
+            file.write(str(user) + "\n")
+
+
 def printUser(users):
     """Print the users list"""
     for user in users:
         print(f"{user.username}: {user.password} - {user.score}")
 
-def isUserExist(filename,userlist,username):
+
+def isUserExist(filename, userlist, username):
     """Check whether a username exists"""
 
     for user in userlist:
@@ -77,14 +81,27 @@ def isUserExist(filename,userlist,username):
             return True
     return False
 
-def playGame():
+
+def findUserByName(users, username):
+    for user in users:
+        if user.username == username:
+            return user
+    return None  # Return None if no user is found with the given username
+
+
+def playGame(user):
     """Main function to handle the game operations."""
+
     isOver = False
     score = 0
+    lives = 2
+    print(logo)
+
     while not isOver:
-        print(logo)
+
         questA = pickRandomData()
         questB = pickRandomData()
+        print(f"score: {score}")
         print(f"Compare A : {questA['name']}, a {questA['description']}, from {questA['country']}")
         print(vs)
         print(f"Agains B: {questB['name']}, a {questB['description']}, from {questB['country']}")
@@ -99,38 +116,85 @@ def playGame():
             if answer == 'B':
                 score += 1
             else:
-                score -= 1
+                lives -= 1
 
-        if score < 0:
-            print(f"Sorry {questA['name']}, you lose {questB['name']}")
+        if lives == 0:
+            print(f"\n\n\nSorry {user.username}, you lose :(")
             isOver = True
+        elif answer == 'Q':
+            print(f"\nYou have just quit!\n")
+            isOver = True
+
+    print(f"score : {score} ")
+    user.score += score
+
+
+def registerUser(filename, userlist):
+    print("Registration")
+    username = input("Choose a username: ")
+    if findUserByName(userlist, username):
+        print("Username already taken. Please try a different username.")
+        return None
+    password = input("Choose a password: ")
+    newUser = User(username, password, 0)
+    saveUser(newUser, filename, userlist)
+    userlist.append(newUser)
+    return newUser
+
+
+def loginUser(users):
+    count = 3
+    print("Login")
+    while count != 0:
+        username = input("Enter your username: ")
+        password = input("Enter your password: ")
+        user = findUserByName(users, username)
+        if user and user.password == password:
+            print("Login successful!")
+            return user
         else:
-            print(f"\nYour score is {score}\n")
+            count -= 1
+            print(f"Invalid username or password. Please try again. Remaining try is {count}")
+
+    return None
 
 
 def main():
-    fileName = "credentials.txt"
+    filename = "credentials.txt"
 
-    """user1 = User("Kimberly", "password")
-    print(user1)
-    saveUser(user1, fileName)
-    
-    saveUser(User("John", "Doe"), fileName)
-    saveUser(User("Avis", "123123."),fileName)
-    """
+    # Load existing users
+    users = loadUser(filename)
 
-    users = loadUser(fileName)
-    printUser(users)
-    saveUser(User("Kevin", "asd123 "), fileName,users)
-
-    print(isUserExist(fileName,users, "Avis"))
-
-    """
+    # Initial menu for login or registration
     while True:
-        playGame()
-        if input("Do you want to play another game ? Type 'y' for yes, 'n' for no: ").lower() != 'y':
+        choice = input("Do you want to [login] (l) or [register] (r)? ")
+        if choice.lower() == 'login' or choice.lower() == 'l':
+            user = loginUser(users)
+            if user:
+                print("-------------------------")
+                print(f"Welcome! {user.username}")
+                print("-------------------------")
+                break
+        elif choice.lower() == 'register' or choice.lower() == 'r':
+            user = registerUser(filename, users)
+            if user:
+                print("-------------------------")
+                print("Thank you for registering!")
+                print("-------------------------")
+                break
+        else:
+            print("Please enter 'login' or 'register'.")
+
+    print(user)
+    # Play the game after successful login or registration
+    while True:
+        playGame(user)
+        if input("Do you want to play another game? Type 'y' for yes, 'n' for no: ").lower() != 'y':
             break
-    """
+
+    printUser(users)
+    # Save the user's new score
+    updateUsers(filename, users)
 
 
 if __name__ == '__main__':
