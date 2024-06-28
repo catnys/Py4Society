@@ -29,4 +29,4 @@ class User:
         return self.password
 
     def __str__(self):
-        return f"User({self.username})"
+        return f"{self.username},{self.password},{self.score}"
