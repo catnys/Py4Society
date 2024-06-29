@@ -10,10 +10,10 @@ def main():
 
     quiz = QuizBrain(questionBank)
 
-    while not quiz.isEmpty():
+    while quiz.isNotEmpty():
         quiz.nextQuestion()
 
-    print(f"Your final score is {quiz.score()}/{len(quiz.questions)}")
+    print(f"Your final score is {quiz.score}/{len(quiz.questions)}")
 
 if __name__ == '__main__':
     main()

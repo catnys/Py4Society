@@ -5,12 +5,8 @@ class QuizBrain:
         self.questionIndex = 0
         self.score = 0
 
-    def isEmpty(self):
-        return self.questionIndex == len(self.questions)
-
-    def nextQuestion(self):
-        input(f"Q.{self.questionIndex}: {self.questions[self.questionIndex].question} (True/False)")
-        self.questionIndex += 1
+    def isNotEmpty(self):
+        return self.questionIndex < len(self.questions)
 
 
     def checkAnswer(self, answer,userAnswer):
@@ -22,3 +18,12 @@ class QuizBrain:
         print(f"Your score is {self.score}/{self.questionIndex}")
 
 
+    def nextQuestion(self):
+        if self.isNotEmpty():
+            currentQuestion = self.questions[self.questionIndex]
+            userAnswer = input(f"Q.{self.questionIndex}: {currentQuestion.question} (True/False): ")
+            self.checkAnswer(currentQuestion.answer, userAnswer)
+            self.questionIndex += 1
+        else:
+            # No more questions to answer
+            print("No more questions available.")
