@@ -13,6 +13,7 @@ def main():
     while not quiz.isEmpty():
         quiz.nextQuestion()
 
+    print(f"Your final score is {quiz.score()}/{len(quiz.questions)}")
 
 if __name__ == '__main__':
     main()
