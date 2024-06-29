@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change beforePath="$PROJECT_DIR$/Day019-Intermediate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day019-Intermediate/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day019-Intermediate/etch-a-sketch/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +61,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day019-Intermediate/etch-a-sketch" />
+      <recent name="$PROJECT_DIR$/Day019-Intermediate" />
       <recent name="$PROJECT_DIR$/Day018-Intermediate" />
       <recent name="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
       <recent name="$PROJECT_DIR$/Day011-Beginner/Blackjack-Project" />
@@ -86,7 +88,7 @@
       <workItem from="1719309100548" duration="355000" />
       <workItem from="1719309462424" duration="31948000" />
       <workItem from="1719674153347" duration="290000" />
-      <workItem from="1719674652106" duration="6904000" />
+      <workItem from="1719674652106" duration="7159000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
