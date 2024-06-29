@@ -1,5 +1,61 @@
 # `Day 19 - Intermediate`
 
+# Passing Functions to Functions in Python
+
+In Python, functions are first-class objects. This means they can be passed around and used as arguments just like any other object (int, str, float, etc.). This feature provides a flexible way to create higher-order functions. These are functions that take other functions as arguments or return them as results.
+
+## Concepts
+
+### First-Class Objects
+A first-class object in a programming language is an entity which supports all the operations generally available to other entities. These operations typically include being passed as an argument, returned from a function, and assigned to a variable.
+
+### Higher-Order Functions
+A higher-order function is any function that either:
+- Takes one or more functions as arguments
+- Returns a function as its result
+
+## Example Usage
+
+### Passing a Simple Function
+
+```python
+def greet(name):
+    return "Hello, " + name
+
+def call_function(f, arg):
+    return f(arg)
+
+result = call_function(greet, "Alice")
+print(result)  # Output: Hello, Alice
+```
+
+### Using the Function as an Argument in Event Listeners
+
+Here's how you can use this concept in event-driven programming with the `turtle` module:
+
+```python
+import turtle
+
+def turn_left():
+    turtle.left(90)
+
+def on_space_press(fun):
+    turtle.onkey(fun, "space")
+
+screen = turtle.Screen()
+on_space_press(turn_left)
+screen.listen()
+screen.mainloop()
+```
+
+
+
+----
+
+# ⭐️✨🌸 ⭐️✨🌸 ⭐️✨🌸 ⭐️✨🌸 ⭐️✨🌸 
+
+---
+
 
 # Turtle Event Listeners
 
