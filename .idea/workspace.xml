@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day020-Intermediate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day020-Intermediate/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day020-Intermediate/snake.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day020-Intermediate/snake.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -90,7 +89,7 @@
       <workItem from="1719309100548" duration="355000" />
       <workItem from="1719309462424" duration="31948000" />
       <workItem from="1719674153347" duration="290000" />
-      <workItem from="1719674652106" duration="12683000" />
+      <workItem from="1719674652106" duration="13033000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
