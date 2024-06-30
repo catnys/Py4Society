@@ -1,47 +1,28 @@
+from turtle import Screen
+from snake import Snake
 import time
 
-from snake import Snake
-from turtle import Screen, Turtle
+screen = Screen()
+screen.setup(width=600, height=600)
+screen.bgcolor("black")
+screen.title("My Snake Game")
+screen.tracer(0)
+
+snake = Snake()
+food = Food()
+
+screen.listen()
+screen.onkey(snake.up, "Up")
+screen.onkey(snake.down, "Down")
+screen.onkey(snake.left, "Left")
+screen.onkey(snake.right, "Right")
+
+game_is_on = True
+while game_is_on:
+    screen.update()
+    time.sleep(0.1)
+
+    snake.move()
 
 
-def setUpScreen(screen):
-    screen.setup(width=800, height=600)
-    screen.bgcolor('black')
-    screen.title("Snake Game")
-    screen.tracer(0)
-
-def main():
-    """main function"""
-    segments = []
-    tim = Snake()
-    screen = Screen()
-    setUpScreen(screen)
-
-    startingPosition = [(0,0), (-20,0), (-40,0)]
-
-    for pos in startingPosition:
-        newSegment = Turtle("square")
-        newSegment.color('white')
-        newSegment.penup()
-        newSegment.goto(pos)
-        segments.append(newSegment)
-
-
-    isGameOn = True
-    while isGameOn:
-        screen.update()
-        time.sleep(0.1)
-
-    for segment in range(len(segments) -1, 0, -1):
-        newX = segments[segment-1].xcor()
-        newY = segments[segment-1].ycor()
-        segments[segment].goto(newX, newY)
-    segments[0].forward(20)
-    segments[0].left(90)
-
-
-    screen.exitonclick()
-
-
-if __name__ == "__main__":
-    main()
+screen.exitonclick()
