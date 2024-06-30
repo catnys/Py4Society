@@ -1,39 +1,46 @@
 from turtle import Turtle
+STARTING_POSITIONS = [(0, 0), (-20, 0), (-40, 0)]
+MOVE_DISTANCE = 20
+UP = 90
+DOWN = 270
+LEFT = 180
+RIGHT = 0
 
 
-class Snake(Turtle):
-    # add constructor
-    def __init__(self, health=1, length=3):
-        super().__init__()
-        self.health = health
-        self.length = length
+class Snake:
 
-    # getters and setters
+    def __init__(self):
+        self.segments = []
+        self.create_snake()
+        self.head = self.segments[0]
 
-    def getHealth(self):
-        return self.health
+    def create_snake(self):
+        for position in STARTING_POSITIONS:
+            new_segment = Turtle("square")
+            new_segment.color("white")
+            new_segment.penup()
+            new_segment.goto(position)
+            self.segments.append(new_segment)
 
-    def getLength(self):
-        return self.length
+    def move(self):
+        for seg_num in range(len(self.segments) - 1, 0, -1):
+            new_x = self.segments[seg_num - 1].xcor()
+            new_y = self.segments[seg_num - 1].ycor()
+            self.segments[seg_num].goto(new_x, new_y)
+        self.head.forward(MOVE_DISTANCE)
 
-    def setHealth(self, health):
-        self.health = health
+    def up(self):
+        if self.head.heading() != DOWN:
+            self.head.setheading(UP)
 
-    def setLength(self, length):
-        self.length = length
+    def down(self):
+        if self.head.heading() != UP:
+            self.head.setheading(DOWN)
 
-    def __str__(self):
-        return f"{self.length},{self.health}"
+    def left(self):
+        if self.head.heading() != RIGHT:
+            self.head.setheading(LEFT)
 
-    # Custom methods
-    def moveForward(self):
-        self.forward(10)
-
-    def moveBackward(self):
-        self.backward(10)
-
-    def turnLeft(self):
-        self.left(10)
-
-    def turnRight(self):
-        self.right(10)
+    def right(self):
+        if self.head.heading() != LEFT:
+            self.head.setheading(RIGHT)
