@@ -26,6 +26,11 @@ def detectCollisionOnWall(ball: Ball):
         ball.bounceX()
 
 
+def detectCollisionOnPaddle(ball: Ball, rightPaddle: Paddle, leftPaddle: Paddle):
+    if ball.distance(rightPaddle) < 50 and ball.xcor() > 340 or ball.distance(leftPaddle) < 50 and ball.xcor() < -340:
+        ball.bounceX()
+
+
 def main():
     """"main function"""
     isGameOn = True
@@ -49,6 +54,7 @@ def main():
         ball.move()
 
         detectCollisionOnWall(ball)
+        detectCollisionOnPaddle(ball, rightPaddle, leftPaddle)
 
     screen.exitonclick()
 
