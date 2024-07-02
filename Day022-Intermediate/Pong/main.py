@@ -1,5 +1,7 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
+from ball import Ball
+import time
 
 
 def setScreen(screen: Screen):
@@ -15,16 +17,26 @@ def refreshScreen(screen: Screen):
     screen.update()
 
 
+def detectCollisionOnWall(ball: Ball):
+    # detect collision
+    if ball.ycor() > 280 or ball.ycor() < -280:
+        ball.bounceY()
+
+    if ball.xcor() < -380 or ball.xcor() > 380:
+        ball.bounceX()
+
+
 def main():
     """"main function"""
     isGameOn = True
     screen = Screen()
+    ball = Ball()
 
     setScreen(screen)
     screen.listen()
 
-    rightPaddle = Paddle((350,0))
-    leftPaddle = Paddle((-350,0))
+    rightPaddle = Paddle((350, 0))
+    leftPaddle = Paddle((-350, 0))
 
     screen.onkey(rightPaddle.moveUp, "Up")
     screen.onkey(rightPaddle.moveDown, "Down")
@@ -32,7 +44,11 @@ def main():
     screen.onkey(leftPaddle.moveDown, "s")
 
     while isGameOn:
+        time.sleep(1 / 60)
         screen.update()
+        ball.move()
+
+        detectCollisionOnWall(ball)
 
     screen.exitonclick()
 
