@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing/car_manager.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing/car_manager.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing/player.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing/player.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +45,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.car_manager.executor": "Run",
     "Python.main.executor": "Run",
     "Python.part2.executor": "Run",
     "Python.part3.executor": "Run",
@@ -97,7 +97,7 @@
       <workItem from="1719309462424" duration="31948000" />
       <workItem from="1719674153347" duration="290000" />
       <workItem from="1719674652106" duration="14591000" />
-      <workItem from="1719909508528" duration="8889000" />
+      <workItem from="1719909508528" duration="9314000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
@@ -118,9 +118,10 @@
     <option name="LAST_COMMIT_MESSAGE" value="pull from origin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1719946846229" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
+    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1719947478145" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
     <SUITE FILE_PATH="coverage/Py4Society$quiz_brain.coverage" NAME="quiz_brain Coverage Results" MODIFIED="1719679452091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
     <SUITE FILE_PATH="coverage/Py4Society$part2.coverage" NAME="part2 Coverage Results" MODIFIED="1719310145252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
+    <SUITE FILE_PATH="coverage/Py4Society$car_manager.coverage" NAME="car_manager Coverage Results" MODIFIED="1719947472996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
     <SUITE FILE_PATH="coverage/Py4Society$part3.coverage" NAME="part3 Coverage Results" MODIFIED="1719312829895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
     <SUITE FILE_PATH="coverage/Py4Society$player.coverage" NAME="player Coverage Results" MODIFIED="1719946843978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
   </component>
