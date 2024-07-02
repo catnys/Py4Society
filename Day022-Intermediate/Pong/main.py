@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 
 
+
 def setScreen(screen: Screen):
     """Adjust the screen of the pong game"""
     screen.bgcolor('black')
@@ -26,19 +27,13 @@ def moveDown(paddle) -> None:
 
 def main():
     """"main function"""
-
     isGameOn = True
-
     screen = Screen()
-    setScreen(screen)
 
-    paddle = Turtle()
-    paddle.shape('square')
-    paddle.color('white')
-    paddle.shapesize(stretch_wid=5, stretch_len=1)
-    paddle.penup()
-    paddle.goto(350, 0)
+    setScreen(screen)
     screen.listen()
+
+    Paddle
     screen.onkey(lambda: moveUp(paddle), "Up")
     screen.onkey(lambda: moveDown(paddle), "Down")
 
