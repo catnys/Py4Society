@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
 
+
 def setScreen(screen: Screen):
     """Adjust the screen of the pong game"""
     screen.bgcolor('black')
@@ -14,16 +15,6 @@ def refreshScreen(screen: Screen):
     screen.update()
 
 
-def moveUp(paddle) -> None:
-    newY = paddle.ycor() + 20
-    paddle.goto(paddle.xcor, newY)
-
-
-def moveDown(paddle) -> None:
-    newY = paddle.ycor() - 20
-    paddle.goto(paddle.xcor, newY)
-
-
 def main():
     """"main function"""
     isGameOn = True
@@ -32,9 +23,13 @@ def main():
     setScreen(screen)
     screen.listen()
 
-    Paddle
-    screen.onkey(lambda: moveUp(paddle), "Up")
-    screen.onkey(lambda: moveDown(paddle), "Down")
+    rightPaddle = Paddle((350,0))
+    leftPaddle = Paddle((-350,0))
+
+    screen.onkey(rightPaddle.moveUp(), "Up")
+    screen.onkey(rightPaddle.moveDown(), "Down")
+    screen.onkey(leftPaddle.moveUp(), "w")
+    screen.onkey(leftPaddle.moveDown(), "s")
 
     while isGameOn:
         screen.update()
