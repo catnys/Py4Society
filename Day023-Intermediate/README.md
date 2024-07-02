@@ -1,8 +1,8 @@
 # `Day 23 - Intermediate`
 
-# Step-by-Step Guide: Reading Information from a File and Storing in Dictionaries
+# Step-by-Step Guide: Reading Information from a CSV File and Storing in Dictionaries (Without Using `csv` Library)
 
-This guide will walk you through the process of reading information from a file, storing it into dictionaries, and then creating a list of those dictionaries using Python. 
+This guide will walk you through the process of reading information from a CSV file, storing it into dictionaries, and then creating a list of those dictionaries using Python without using the `csv` library.
 
 ## Prerequisites
 
@@ -22,17 +22,9 @@ Bob,25,Los Angeles
 Charlie,35,Chicago
 ```
 
-### 2. Import Necessary Libraries
+### 2. Read the File and Store Data in Dictionaries
 
-You'll need the `csv` library to handle the file reading. 
-
-```python
-import csv
-```
-
-### 3. Read the File and Store Data in Dictionaries
-
-We'll read the file line by line and store each line as a dictionary. 
+We'll read the file line by line, manually extract the header, and then store each subsequent line as a dictionary.
 
 ```python
 # Define the file name
@@ -43,35 +35,44 @@ data_list = []
 
 # Open the file for reading
 with open(file_name, mode='r') as file:
-    # Create a CSV reader object
-    csv_reader = csv.DictReader(file)
-    
-    # Iterate over each row in the CSV file
-    for row in csv_reader:
-        # Convert the row into a dictionary and add it to the list
-        data_list.append(dict(row))
+    # Read all lines from the file
+    lines = file.readlines()
+
+    # Extract the header from the first line and split by comma
+    header = lines[0].strip().split(',')
+
+    # Iterate over each remaining line in the file
+    for line in lines[1:]:
+        # Split the line by comma to get the values
+        values = line.strip().split(',')
+        
+        # Convert the line into a dictionary using the header
+        row_dict = {header[i]: values[i] for i in range(len(header))}
+        
+        # Add the dictionary to the list
+        data_list.append(row_dict)
 
 # Print the list of dictionaries
 print(data_list)
 ```
 
-### 4. Explanation of the Code
+### 3. Explanation of the Code
 
-- **Import the csv library**: This library provides functionality to read from and write to CSV files.
 - **Define the file name**: Specify the name of the file you want to read.
 - **Create an empty list**: This list will store the dictionaries created from each row of the CSV file.
 - **Open the file**: Use the `open()` function to open the file in read mode.
-- **Create a CSV reader object**: The `csv.DictReader` class reads each row in the CSV file as a dictionary.
-- **Iterate over each row**: Use a for loop to iterate over each row in the CSV file.
-- **Convert each row into a dictionary and add to the list**: The `dict(row)` converts the row into a dictionary and the `append()` method adds it to the list.
+- **Read all lines from the file**: Use the `readlines()` method to read all lines from the file into a list.
+- **Extract the header**: The first line of the file contains the column names, which are split by comma and stored in the `header` list.
+- **Iterate over each remaining line**: Use a for loop to iterate over each remaining line in the file.
+- **Split the line by comma**: The `strip()` method removes any leading/trailing whitespace, and the `split(',')` method splits the line by comma to get the values.
+- **Convert each line into a dictionary using the header**: Create a dictionary where the keys are the column names from the header and the values are the corresponding data from the line.
+- **Add the dictionary to the list**: Use the `append()` method to add the dictionary to the list.
 
-### 5. Complete Code
+### 4. Complete Code
 
 Here is the complete code combined for your reference:
 
 ```python
-import csv
-
 # Define the file name
 file_name = 'data.csv'
 
@@ -80,19 +81,28 @@ data_list = []
 
 # Open the file for reading
 with open(file_name, mode='r') as file:
-    # Create a CSV reader object
-    csv_reader = csv.DictReader(file)
-    
-    # Iterate over each row in the CSV file
-    for row in csv_reader:
-        # Convert the row into a dictionary and add it to the list
-        data_list.append(dict(row))
+    # Read all lines from the file
+    lines = file.readlines()
+
+    # Extract the header from the first line and split by comma
+    header = lines[0].strip().split(',')
+
+    # Iterate over each remaining line in the file
+    for line in lines[1:]:
+        # Split the line by comma to get the values
+        values = line.strip().split(',')
+        
+        # Convert the line into a dictionary using the header
+        row_dict = {header[i]: values[i] for i in range(len(header))}
+        
+        # Add the dictionary to the list
+        data_list.append(row_dict)
 
 # Print the list of dictionaries
 print(data_list)
 ```
 
-### 6. Running the Code
+### 5. Running the Code
 
 1. Save the CSV content in a file named `data.csv`.
 2. Save the complete code in a Python file, e.g., `read_file.py`.
@@ -110,4 +120,4 @@ You should see the following output:
 
 ## Conclusion
 
-By following these steps, you can read data from a file, store it in dictionaries, and create a list of those dictionaries in Python. This method is versatile and can be adapted for different file formats and data structures.
+By following these steps, you can read data from a CSV file, store it in dictionaries, and create a list of those dictionaries in Python without using the `csv` library. This method is versatile and can be adapted for different file formats and data structures.
