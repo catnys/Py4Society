@@ -26,10 +26,10 @@ def main():
     rightPaddle = Paddle((350,0))
     leftPaddle = Paddle((-350,0))
 
-    screen.onkey(rightPaddle.moveUp(), "Up")
-    screen.onkey(rightPaddle.moveDown(), "Down")
-    screen.onkey(leftPaddle.moveUp(), "w")
-    screen.onkey(leftPaddle.moveDown(), "s")
+    screen.onkey(rightPaddle.moveUp, "Up")
+    screen.onkey(rightPaddle.moveDown, "Down")
+    screen.onkey(leftPaddle.moveUp, "w")
+    screen.onkey(leftPaddle.moveDown, "s")
 
     while isGameOn:
         screen.update()
