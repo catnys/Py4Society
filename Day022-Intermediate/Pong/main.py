@@ -1,6 +1,7 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
 from ball import Ball
+from scoreboard import Scoreboard
 import time
 
 
@@ -19,11 +20,8 @@ def refreshScreen(screen: Screen):
 
 def detectCollisionOnWall(ball: Ball):
     # detect collision
-    if ball.ycor() > 280 or ball.ycor() < -280:
+    if ball.ycor() < -280 or ball.ycor() > 280:
         ball.bounceY()
-
-    if ball.xcor() < -380 or ball.xcor() > 380:
-        ball.bounceX()
 
 
 def detectCollisionOnPaddle(ball: Ball, rightPaddle: Paddle, leftPaddle: Paddle):
@@ -33,16 +31,18 @@ def detectCollisionOnPaddle(ball: Ball, rightPaddle: Paddle, leftPaddle: Paddle)
 
 def main():
     """"main function"""
+    # initialize game variables
     isGameOn = True
     screen = Screen()
     ball = Ball()
+    rightPaddle = Paddle((350, 0))
+    leftPaddle = Paddle((-350, 0))
+    scoreboard = Scoreboard()
+
+
 
     setScreen(screen)
     screen.listen()
-
-    rightPaddle = Paddle((350, 0))
-    leftPaddle = Paddle((-350, 0))
-
     screen.onkey(rightPaddle.moveUp, "Up")
     screen.onkey(rightPaddle.moveDown, "Down")
     screen.onkey(leftPaddle.moveUp, "w")
@@ -55,6 +55,16 @@ def main():
 
         detectCollisionOnWall(ball)
         detectCollisionOnPaddle(ball, rightPaddle, leftPaddle)
+
+        # Detect R paddle misses
+        if ball.xcor() > 380:
+            ball.resetPosition()
+            scoreboard.l_point()
+
+        # Detect L paddle misses:
+        if ball.xcor() < -380:
+            ball.resetPosition()
+            scoreboard.r_point()
 
     screen.exitonclick()
 
