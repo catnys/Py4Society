@@ -1,7 +1,6 @@
 from turtle import Turtle, Screen
 from paddle import Paddle
 
-
 def setScreen(screen: Screen):
     """Adjust the screen of the pong game"""
     screen.bgcolor('black')
