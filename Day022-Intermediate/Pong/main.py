@@ -1,5 +1,5 @@
 from turtle import Turtle, Screen
-
+from paddle import Paddle
 
 
 def setScreen(screen: Screen):
