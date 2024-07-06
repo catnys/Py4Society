@@ -28,14 +28,11 @@ class Scoreboard(Turtle):
         self.clear()
         self.updateScoreboard()
 
-    def reset(self):
-        if self.highestScore < self.score:
-            self.highestScore = self.score
-        self.score = 0
-
     def setHighestScore(self, score):
         self.highestScore = int(score)
 
+    def getHighestScore(self):
+        return self.highestScore
 
-
-
+    def getScore(self):
+        return self.score

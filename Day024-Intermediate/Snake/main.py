@@ -12,10 +12,12 @@ def readFile(filename='score.txt'):
     file.close()
     return int(contents)
 
-def updateScoreFile(score):
-    file = open("score.txt", "w")
+
+def updateScoreFile(filename='score.txt', score=0):
+    file = open(filename, "w")
     file.write(str(score))
     file.close()
+
 
 def main():
     screen = Screen()
@@ -24,13 +26,12 @@ def main():
     screen.title("My Snake Game")
     screen.tracer(0)
 
-    
     # init objects
     snake = Snake()
     food = Food()
     scoreboard = Scoreboard()
     scoreboard.setHighestScore(readFile())
-    
+
     screen.listen()
     screen.onkey(snake.up, "Up")
     screen.onkey(snake.down, "Down")
@@ -51,16 +52,20 @@ def main():
 
         # Detect collision with wall.
         if snake.head.xcor() > 280 or snake.head.xcor() < -280 or snake.head.ycor() > 280 or snake.head.ycor() < -280:
-            game_is_on = False
+            isGameOn = False
             scoreboard.gameOver()
         # Detect collision with tail.
         for segment in snake.segments:
             if segment == snake.head:
                 pass
             elif snake.head.distance(segment) < 10:
-                game_is_on = False
+                isGameOn = False
                 scoreboard.gameOver()
-    updateScoreFile(scoreboard.getScore())
+    print(f" score --> {scoreboard.getScore()} highest --> {scoreboard.getHighestScore()}")
+
+    if scoreboard.getScore() > scoreboard.getHighestScore():
+        scoreboard.setHighestScore(scoreboard.getScore())
+        updateScoreFile("score.txt",scoreboard.getScore())
     screen.exitonclick()
 
 
