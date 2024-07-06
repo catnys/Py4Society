@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
+      <change afterPath="$PROJECT_DIR$/Day025-Intermediate/TrackProject/user.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day025-Intermediate/TrackProject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day025-Intermediate/TrackProject/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -98,7 +100,7 @@
       <workItem from="1719309462424" duration="31948000" />
       <workItem from="1719674153347" duration="290000" />
       <workItem from="1719674652106" duration="14591000" />
-      <workItem from="1719909508528" duration="20442000" />
+      <workItem from="1719909508528" duration="22074000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
@@ -130,7 +132,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="pull from origin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1720259421871" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day025-Intermediate/Day25-Start" />
+    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1720298735616" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day025-Intermediate/TrackProject" />
     <SUITE FILE_PATH="coverage/Py4Society$quiz_brain.coverage" NAME="quiz_brain Coverage Results" MODIFIED="1719679452091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
     <SUITE FILE_PATH="coverage/Py4Society$part2.coverage" NAME="part2 Coverage Results" MODIFIED="1719310145252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
     <SUITE FILE_PATH="coverage/Py4Society$scoreboard.coverage" NAME="scoreboard Coverage Results" MODIFIED="1720255396676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day024-Intermediate/Snake" />
