@@ -3,6 +3,14 @@ from snake import Snake
 from food import Food
 from scoreboard import Scoreboard
 import time
+import os
+
+
+def readFile(filename='score.txt'):
+    file = open(filename, "r")
+    contents = file.read()
+    file.close()
+    return int(contents)
 
 
 def main():
@@ -12,11 +20,13 @@ def main():
     screen.title("My Snake Game")
     screen.tracer(0)
 
+    
     # init objects
     snake = Snake()
     food = Food()
     scoreboard = Scoreboard()
-
+    scoreboard.setScore()
+    
     screen.listen()
     screen.onkey(snake.up, "Up")
     screen.onkey(snake.down, "Down")
