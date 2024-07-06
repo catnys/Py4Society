@@ -7,6 +7,8 @@ class Scoreboard(Turtle):
 
     def __init__(self):
         super().__init__()
+        self.highestScore = 0
+        self.score = 0
         self.level = 1
         self.hideturtle()
         self.penup()
@@ -21,6 +23,12 @@ class Scoreboard(Turtle):
         self.level += 1
         self.update_scoreboard()
 
-    def game_over(self):
-        self.goto(0, 0)
-        self.write(f"GAME OVER", align="center", font=FONT)
+    def reset(self):
+        if self.highestScore < self.score:
+            self.highestScore = self.score
+        self.score = 0
+
+
+    def increaseScore(self):
+        self.score += 1
+        self.update_scoreboard()
