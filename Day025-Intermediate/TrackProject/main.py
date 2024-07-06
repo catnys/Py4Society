@@ -3,19 +3,18 @@ from datetime import datetime
 from user import User
 
 
-
 def readUsersFromCsv(file_path='data.csv'):
     users = []
     with open(file_path, mode='r') as file:
         csv_reader = csv.DictReader(file, delimiter=';')
         for row in csv_reader:
             name = row['Name']
-            total_score = int(row['Total Score'])
+            totalScore = int(row['Total Score'])
             days = {
                 datetime.strptime(date, '%d.%m.%Y'): int(score)
                 for date, score in row.items() if date not in ['Name', 'Total Score']
             }
-            user = User(name, total_score, days)
+            user = User(name, totalScore, days)
             users.append(user)
     return users
 
@@ -40,16 +39,36 @@ def findUserByName(users, name):
     return None
 
 
-def createUser(name, total_score, days):
-    user = User(name, total_score, days)
-    return user
+def createUser(users, name, totalScore, scores):
+    days = {datetime.strptime(date, '%d.%m.%Y'): score for date, score in scores.items()}
+    new_user = User(name, totalScore, days)
+    users.append(new_user)
 
 
-def writeUsersToCsv(users, file_path='data.csv'):
-    with open(file_path, mode='w') as file:
-        csv_writer = csv.writer(file, delimiter=';')
+def writeUsers2Csv(file_path, users):
+    if not users:
+        return
+
+    # Extract the dates from the first user for the header
+    dates = list(users[0].days.keys())
+    dateStrs = [date.strftime('%d.%m.%Y') for date in dates]
+
+    with open(file_path, mode='w', newline='') as file:
+        writer = csv.writer(file, delimiter=';')
+
+        # Write header
+        header = ['Name', 'Total Score'] + dateStrs
+        writer.writerow(header)
+
+        # Write user data
         for user in users:
+            row = [user.name, user.totalScore] + [user.days.get(date, '') for date in dates]
+            writer.writerow(row)
 
+
+def displayUsers(users):
+    for user in users:
+        print(user)
 
 
 def main():
@@ -57,8 +76,23 @@ def main():
     file_path = 'data.csv'  # Ensure this is the correct path to your CSV file
     users = readUsersFromCsv(file_path)
 
-    for user in users:
-        print(user)
+    displayUsers(users)
+
+    newUserName = "New User"
+    newUserTotalScore = 20
+    newUserScores = {
+        '6.07.2024': 4,
+        '7.07.2024': 3,
+        '8.07.2024': 5,
+        '9.07.2024': 4,
+        '10.07.2024': 4
+    }
+    createUser(users, newUserName, newUserTotalScore, newUserScores)
+
+    # Write updated users back to CSV
+    writeUsers2Csv(file_path, users)
+
+    displayUsers(users)
 
     findUserOnDate(users, "Dua Lipa", '9.07.2024')
 

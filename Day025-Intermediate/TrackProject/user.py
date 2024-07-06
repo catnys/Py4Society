@@ -1,7 +1,7 @@
 class User:
-    def __init__(self, name, total_score, days):
+    def __init__(self, name, totalScore, days):
         self.name = name
-        self.total_score = total_score
+        self.totalScore = totalScore
         self.days = days
 
     def getName(self):
@@ -11,10 +11,10 @@ class User:
         self.name = name
 
     def getTotalScore(self):
-        return self.total_score
+        return self.totalScore
 
-    def setTotalScore(self, total_score):
-        self.total_score = total_score
+    def setTotalScore(self, totalScore):
+        self.totalScore = totalScore
 
     def __repr__(self):
-        return f"User(name={self.name}, total_score={self.total_score}, days={self.days})"
+        return f"User(name={self.name}, totalScore={self.totalScore}, days={self.days})"
