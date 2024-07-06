@@ -12,6 +12,10 @@ def readFile(filename='score.txt'):
     file.close()
     return int(contents)
 
+def updateScoreFile(score):
+    file = open("score.txt", "w")
+    file.write(str(score))
+    file.close()
 
 def main():
     screen = Screen()
@@ -25,7 +29,7 @@ def main():
     snake = Snake()
     food = Food()
     scoreboard = Scoreboard()
-    scoreboard.setScore()
+    scoreboard.setHighestScore(readFile())
     
     screen.listen()
     screen.onkey(snake.up, "Up")
@@ -56,7 +60,7 @@ def main():
             elif snake.head.distance(segment) < 10:
                 game_is_on = False
                 scoreboard.gameOver()
-
+    updateScoreFile(scoreboard.getScore())
     screen.exitonclick()
 
 

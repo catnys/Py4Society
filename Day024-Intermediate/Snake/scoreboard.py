@@ -33,7 +33,9 @@ class Scoreboard(Turtle):
             self.highestScore = self.score
         self.score = 0
 
-    def setScore(self, score):
-        self.score = int(score)
+    def setHighestScore(self, score):
+        self.highestScore = int(score)
+
+
 
 
