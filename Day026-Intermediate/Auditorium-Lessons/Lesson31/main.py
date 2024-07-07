@@ -19,7 +19,14 @@ Example Output
 # 🚨 Don't change code above 👆
 # Write your code below 👇
 
-original_string = "hello world"
-uppercase_string = ''.join([char.upper() for char in original_string])
-print(uppercase_string)
+original_string = "hello world ?"
+stringList = original_string.split(" ")
+myDict = {word: len(word) for word in stringList if word.isalpha()}
+print(myDict)
 
+
+
+#
+# uppercase_string = ''.join([char.upper() for char in original_string])
+# print(uppercase_string)
+#
