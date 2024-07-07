@@ -19,7 +19,7 @@ Example Output
 # 🚨 Don't change code above 👆
 # Write your code below 👇
 
-original_string = "hello world ?"
-stringList = original_string.split(" ")
-myDict = {word: len(word) for word in stringList if word.isalpha()}
+original_string = "hello world?"
+stringList = original_string.split()
+myDict = {word: len(word) for word in stringList}
 print(myDict)
