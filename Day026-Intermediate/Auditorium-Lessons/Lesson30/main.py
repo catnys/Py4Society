@@ -17,7 +17,6 @@ commonList = [x for x in list2 if x in list1]
 print(list1)
 print(list2)
 print("-----")
-print(commonList)
 
 # Write your code above 👆
-# print(result)
+print(commonList)
