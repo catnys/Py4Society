@@ -1,11 +1,27 @@
-from turtle import Turtle, Screen
+import turtle
+import pandas
 
-screen = Screen()
+
+screen = turtle.Screen()
 screen.title("U.S. States Game")
-screen.setup(width=800, height=600)
-screen.bgcolor('black')
-screen.tracer(0)
+img = "blank_states_img.gif"
+screen.addshape(img)
+turtle.shape(img)
+guessedStates = []
 
+while len(guessedStates) < 50:
+    data = pandas.read_csv("50_states.csv")
+    allStates = data["state"].tolist()
+    usrAnswer = screen.textinput(title=f" {len(guessedStates)}/50 are correct", prompt="Which State do you want to guess?").title()
 
+    if usrAnswer in allStates:
+        guessedStates.append(usrAnswer)
+        t = turtle.Turtle()
+        t.speed(0)
+        t.hideturtle()
+        t.penup()
+        stateData = data.loc[data["state"] == usrAnswer]
+        t.goto(int(stateData["x"]), int(stateData["y"]))
+        t.write(usrAnswer, align="center", font=("Arial", 12, "normal"))
 
 screen.exitonclick()
