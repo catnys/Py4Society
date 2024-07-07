@@ -50,7 +50,7 @@
     "Python.scoreboard.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/burakkaya/Documents/Github/Py4Society/Day025-Intermediate/US-States",
+    "last_opened_file_path": "/Users/burakkaya/Documents/Github/Py4Society/Day026-Intermediate/Nato-Alpha",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -62,11 +62,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day026-Intermediate/Nato-Alpha" />
       <recent name="$PROJECT_DIR$/Day025-Intermediate/US-States" />
       <recent name="$PROJECT_DIR$/Day025-Intermediate/Day25-Start" />
       <recent name="$PROJECT_DIR$/Day024-Intermediate" />
       <recent name="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
-      <recent name="$PROJECT_DIR$/Day021-Intermediate/snake-game" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day022-Intermediate/Pong" />
@@ -127,7 +127,7 @@
       <workItem from="1719309462424" duration="31948000" />
       <workItem from="1719674153347" duration="290000" />
       <workItem from="1719674652106" duration="14591000" />
-      <workItem from="1719909508528" duration="34714000" />
+      <workItem from="1719909508528" duration="35016000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
