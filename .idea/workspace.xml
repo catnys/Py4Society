@@ -5,7 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change afterPath="$PROJECT_DIR$/Day027-Intermediate/example5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day028-Intermediate/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day028-Intermediate/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +49,7 @@
     "Python.example2.executor": "Run",
     "Python.example3.executor": "Run",
     "Python.example4.executor": "Run",
+    "Python.example5.executor": "Run",
     "Python.main.executor": "Run",
     "Python.part2.executor": "Run",
     "Python.part3.executor": "Run",
@@ -76,11 +78,11 @@
       <recent name="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day028-Intermediate" />
       <recent name="$PROJECT_DIR$/Day022-Intermediate/Pong" />
       <recent name="$PROJECT_DIR$/Day019-Intermediate/etch-a-sketch" />
       <recent name="$PROJECT_DIR$/Day019-Intermediate" />
       <recent name="$PROJECT_DIR$/Day018-Intermediate" />
-      <recent name="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -105,7 +107,7 @@
       <workItem from="1719674153347" duration="290000" />
       <workItem from="1719674652106" duration="14591000" />
       <workItem from="1719909508528" duration="35838000" />
-      <workItem from="1720443366853" duration="3694000" />
+      <workItem from="1720443366853" duration="4728000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
@@ -137,13 +139,14 @@
     <option name="LAST_COMMIT_MESSAGE" value="pull from origin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1720446109954" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1720553557053" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day028-Intermediate/pomodoro-start" />
     <SUITE FILE_PATH="coverage/Py4Society$part2.coverage" NAME="part2 Coverage Results" MODIFIED="1719310145252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
     <SUITE FILE_PATH="coverage/Py4Society$scoreboard.coverage" NAME="scoreboard Coverage Results" MODIFIED="1720255396676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day024-Intermediate/Snake" />
     <SUITE FILE_PATH="coverage/Py4Society$example3.coverage" NAME="example3 Coverage Results" MODIFIED="1720552378835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
     <SUITE FILE_PATH="coverage/Py4Society$example2.coverage" NAME="example2 Coverage Results" MODIFIED="1720552026867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
     <SUITE FILE_PATH="coverage/Py4Society$player.coverage" NAME="player Coverage Results" MODIFIED="1719946843978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
     <SUITE FILE_PATH="coverage/Py4Society$quiz_brain.coverage" NAME="quiz_brain Coverage Results" MODIFIED="1719679452091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
+    <SUITE FILE_PATH="coverage/Py4Society$example5.coverage" NAME="example5 Coverage Results" MODIFIED="1720552583964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
     <SUITE FILE_PATH="coverage/Py4Society$car_manager.coverage" NAME="car_manager Coverage Results" MODIFIED="1719947472996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
     <SUITE FILE_PATH="coverage/Py4Society$part3.coverage" NAME="part3 Coverage Results" MODIFIED="1719312829895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
     <SUITE FILE_PATH="coverage/Py4Society$example4.coverage" NAME="example4 Coverage Results" MODIFIED="1720552511415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
