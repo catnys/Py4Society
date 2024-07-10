@@ -5,6 +5,10 @@ def generatePasswordButtonClicked():
     """generatePasswordButtonClicked"""
     print("generatePasswordButtonClicked")
 
+def saveButtonClicked():
+    """saveButtonClicked"""
+    print("saveButtonClicked")
+
 
 window = Tk()
 window.title('Password Manager')
