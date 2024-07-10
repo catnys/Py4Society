@@ -1,5 +1,6 @@
 from tkinter import *
 import csv
+import os
 
 
 def readFile(filename):
@@ -10,27 +11,47 @@ def readFile(filename):
             print(row)
 
 
-def writeFile(filename,data):
+def writeFile(filename, data):
+    mode = 'w'
     header = data[0].keys()
 
-    with open(filename, mode='w', newline='') as file:
+    with open(filename, mode=mode, newline='') as file:
         csv_writer = csv.DictWriter(file, fieldnames=header)
         csv_writer.writeheader()
         csv_writer.writerows(data)
 
 
+def appendFile(filename, data):
+    mode = 'a'
+    with open(filename, mode=mode, newline='') as file:
+        csv_writer = csv.writer(file)
+        csv_writer.writerows(data)
+
+
 def generatePasswordButtonClicked():
-    """generatePasswordButtonClicked"""
     print("generatePasswordButtonClicked")
 
 
 def saveButtonClicked():
-    """saveButtonClicked"""
-    print("saveButtonClicked")
+    website = websiteEntry.get()
+    email = emailEntry.get()
+    password = passwordEntry.get()
 
+    data = [
+        {
+            'Website': website,
+            'Email': email,
+            'Password': password
+        }
+    ]
+
+    writeFile('passwords.txt', data)
+    print("Data saved to passwords.txt")
 
 
 def main():
+    global websiteEntry, emailEntry, passwordEntry
+
     window = Tk()
     window.title('Password Manager')
     window.geometry('500x500')
