@@ -1,6 +1,8 @@
 from tkinter import *
 import csv
 import os
+import random
+import string
 
 
 def readFile(filename):
@@ -12,24 +14,37 @@ def readFile(filename):
 
 
 def writeFile(filename, data):
-    mode = 'w'
+    file_exists = os.path.isfile(filename)
     header = data[0].keys()
 
-    with open(filename, mode=mode, newline='') as file:
+    with open(filename, mode='a' if file_exists else 'w', newline='') as file:
         csv_writer = csv.DictWriter(file, fieldnames=header)
-        csv_writer.writeheader()
+        if not file_exists:
+            csv_writer.writeheader()
         csv_writer.writerows(data)
 
 
-def appendFile(filename, data):
-    mode = 'a'
-    with open(filename, mode=mode, newline='') as file:
-        csv_writer = csv.writer(file)
-        csv_writer.writerows(data)
+def generate_password(length=12):
+    """Generate a random password complying with OWASP standards."""
+    if length < 12:
+        length = 12
+
+    characters = string.ascii_letters + string.digits + string.punctuation
+    password = ''.join(random.choice(characters) for i in range(length))
+
+    # Ensure the password meets the OWASP requirements
+    if (any(c.islower() for c in password) and any(c.isupper() for c in password)
+            and any(c.isdigit() for c in password) and any(c in string.punctuation for c in password)):
+        return password
+    else:
+        return generate_password(length)
 
 
 def generatePasswordButtonClicked():
-    print("generatePasswordButtonClicked")
+    password = generate_password()
+    passwordEntry.delete(0, END)
+    passwordEntry.insert(0, password)
+    print("Generated Password:", password)
 
 
 def saveButtonClicked():
@@ -45,8 +60,8 @@ def saveButtonClicked():
         }
     ]
 
-    writeFile('passwords.txt', data)
-    print("Data saved to passwords.txt")
+    writeFile('passwords.csv', data)
+    print("Data saved to passwords.csv")
 
 
 def main():
