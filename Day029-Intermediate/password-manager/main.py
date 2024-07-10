@@ -24,7 +24,7 @@ def writeFile(filename, data):
         csv_writer.writerows(data)
 
 
-def generate_password(length=12):
+def generatePass(length=12):
     """Generate a random password complying with OWASP standards."""
     if length < 12:
         length = 12
@@ -37,11 +37,11 @@ def generate_password(length=12):
             and any(c.isdigit() for c in password) and any(c in string.punctuation for c in password)):
         return password
     else:
-        return generate_password(length)
+        return generatePass(length)
 
 
 def generatePasswordButtonClicked():
-    password = generate_password()
+    password = generatePass()
     passwordEntry.delete(0, END)
     passwordEntry.insert(0, password)
     print("Generated Password:", password)
