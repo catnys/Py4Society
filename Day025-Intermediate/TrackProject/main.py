@@ -4,6 +4,7 @@ from user import User
 
 
 def readUsersFromCsv(file_path='data.csv'):
+    """read users from csv file"""
     users = []
     with open(file_path, mode='r') as file:
         csv_reader = csv.DictReader(file, delimiter=';')
@@ -20,6 +21,7 @@ def readUsersFromCsv(file_path='data.csv'):
 
 
 def findUserOnDate(users, name, date_str):
+    """find user on specific date with given name and date"""
     date = datetime.strptime(date_str, '%d.%m.%Y')
     user = findUserByName(users, name)
     if user:
@@ -33,6 +35,7 @@ def findUserOnDate(users, name, date_str):
 
 
 def findUserByName(users, name):
+    """find user with given name"""
     for user in users:
         if user.name == name:
             return user
@@ -40,12 +43,14 @@ def findUserByName(users, name):
 
 
 def createUser(users, name, totalScore, scores):
+    """create new user"""
     days = {datetime.strptime(date, '%d.%m.%Y'): score for date, score in scores.items()}
     new_user = User(name, totalScore, days)
     users.append(new_user)
 
 
 def writeUsers2Csv(file_path, users):
+    """write users to csv file"""
     if not users:
         return
 
@@ -67,7 +72,8 @@ def writeUsers2Csv(file_path, users):
 
 
 def addDay2Users(users, date_str, scores):
-    for user in users:
+    """add new day for users to csv file"""
+    for user in users: # traverse users
         user.addDay(date_str, 0)  # Initialize all users' scores for the new day to 0
     for user in users:
         if user.name in scores:
@@ -76,6 +82,7 @@ def addDay2Users(users, date_str, scores):
 
 
 def displayUsers(users):
+    """display all users"""
     for user in users:
         print(user)
 
