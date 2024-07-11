@@ -73,7 +73,7 @@ def writeUsers2Csv(file_path, users):
 
 def addDay2Users(users, date_str, scores):
     """add new day for users to csv file"""
-    for user in users: # traverse users
+    for user in users:  # traverse users
         user.addDay(date_str, 0)  # Initialize all users' scores for the new day to 0
     for user in users:
         if user.name in scores:
@@ -81,14 +81,29 @@ def addDay2Users(users, date_str, scores):
             user.totalScore += scores[user.name]  # Correct the total score increment
 
 
+def checkCharacterInList(message: str, char_list: list):
+    for char in message:
+        if char in char_list:
+            return True
+    return False
+
+
+def calculatePoints(letter):
+    if letter == 'c':
+        points = 5
+    elif letter == 'e':
+        points = 1
+
+
 def evaluateMessage(message: str):
-    allowedChars = ['e','c','x']
+    allowedChars = ['e', 'c', 'x']
     totalPoints = 0
-    if not message.isalpha() or message.isdigit() or message.lower() not in allowedChars:
-        print("value is not improperly entered: type --> string")
+    if len(message) != 5 or not checkCharacterInList(message, allowedChars):
+        # eliminate any inappropriate message inputs
+        print("value is not improperly entered: --> type: string && len --> 5 of int")
 
-
-
+    for char in list(message):
+        print(char)
 
 def displayUsers(users):
     """display all users"""
@@ -131,7 +146,7 @@ def main():
     findUserScoreOnDate(users, "Dua Lipa", '11.07.2024')
     """
 
-    message = "sofia"
+    message = "cccex"
     print("-----")
     evaluateMessage(message)
 
