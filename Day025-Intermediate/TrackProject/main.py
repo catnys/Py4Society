@@ -81,10 +81,11 @@ def addDay2Users(users, date_str, scores):
             user.totalScore += scores[user.name]  # Correct the total score increment
 
 
-def checkCharacterInList(message: str, char_list: list):
+def checkCharacterInList(message: str, charList: list):
     for char in message:
-        if char in char_list:
-            return True
+        for i in range(len(charList)):
+            if char in charList[i]['char']:
+                return True
     return False
 
 
@@ -96,7 +97,20 @@ def calculatePoints(letter):
 
 
 def evaluateMessage(message: str):
-    allowedChars = ['e', 'c', 'x']
+    allowedChars = [
+        {
+            'char': 'e',
+            'points': 1
+        },
+        {
+            'char': 'c',
+            'points': 2
+        },
+        {
+            'char': 'x',
+            'points': 0
+        }
+    ]
     totalPoints = 0
     if len(message) != 5 or not checkCharacterInList(message, allowedChars):
         # eliminate any inappropriate message inputs
