@@ -136,12 +136,10 @@ def displayUsers(users):
 def main():
     """main method"""
 
-    file_path = 'data.csv'  # Ensure this is the correct path to your CSV file
+    """Main method"""
+    file_path = 'data.csv'
     users = readUsersFromCsv(file_path)
 
-    displayUsers(users)
-
-    
     # Parameters
     message = "cccex"
     username = "Dua Lipa"
@@ -155,8 +153,6 @@ def main():
     if user:
         # Add the daily score to the user's record
         user.addDay(date, dailyScore)
-        # Update the total score
-        user.totalScore += dailyScore
     else:
         print(f"User '{username}' not found")
 
