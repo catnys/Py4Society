@@ -20,7 +20,7 @@ def readUsersFromCsv(file_path='data.csv'):
     return users
 
 
-def findUserOnDate(users, name, date_str):
+def findUserScoreOnDate(users, name, date_str):
     """find user on specific date with given name and date"""
     date = datetime.strptime(date_str, '%d.%m.%Y')
     user = findUserByName(users, name)
@@ -81,6 +81,15 @@ def addDay2Users(users, date_str, scores):
             user.totalScore += scores[user.name]  # Correct the total score increment
 
 
+def evaluateMessage(message: str):
+    allowedChars = ['e','c','x']
+    totalPoints = 0
+    if not message.isalpha() or message.isdigit() or message.lower() not in allowedChars:
+        print("value is not improperly entered: type --> string")
+
+
+
+
 def displayUsers(users):
     """display all users"""
     for user in users:
@@ -89,6 +98,7 @@ def displayUsers(users):
 
 def main():
     """main method"""
+    """
     file_path = 'data.csv'  # Ensure this is the correct path to your CSV file
     users = readUsersFromCsv(file_path)
 
@@ -117,8 +127,13 @@ def main():
     writeUsers2Csv(file_path, users)
 
     displayUsers(users)
+    print("-----")
+    findUserScoreOnDate(users, "Dua Lipa", '11.07.2024')
+    """
 
-    findUserOnDate(users, "Dua Lipa", '9.07.2024')
+    message = "sofia"
+    print("-----")
+    evaluateMessage(message)
 
 
 if __name__ == "__main__":
