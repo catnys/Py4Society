@@ -1,3 +1,7 @@
+from datetime import datetime
+from typing import Dict
+
+
 class User:
     def __init__(self, name, totalScore, days):
         self.name = name
@@ -15,6 +19,11 @@ class User:
 
     def setTotalScore(self, totalScore):
         self.totalScore = totalScore
+
+    def addDay(self, dateString: str, score: int) -> None:
+        date = datetime.strptime(dateString, '%d.%m.%Y')
+        self.days[date] = score
+        self.totalScore += score
 
     def __repr__(self):
         return f"User(name={self.name}, totalScore={self.totalScore}, days={self.days})"

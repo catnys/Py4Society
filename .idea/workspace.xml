@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change afterPath="$PROJECT_DIR$/Day030-Intermediate/example2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day025-Intermediate/TrackProject/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day025-Intermediate/TrackProject/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day025-Intermediate/TrackProject/user.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day025-Intermediate/TrackProject/user.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,33 +43,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Python.car_manager.executor&quot;: &quot;Run&quot;,
-    &quot;Python.example.executor&quot;: &quot;Run&quot;,
-    &quot;Python.example2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.example3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.example4.executor&quot;: &quot;Run&quot;,
-    &quot;Python.example5.executor&quot;: &quot;Run&quot;,
-    &quot;Python.main.executor&quot;: &quot;Run&quot;,
-    &quot;Python.part2.executor&quot;: &quot;Run&quot;,
-    &quot;Python.part3.executor&quot;: &quot;Run&quot;,
-    &quot;Python.player.executor&quot;: &quot;Run&quot;,
-    &quot;Python.python script.py one two three.executor&quot;: &quot;Run&quot;,
-    &quot;Python.quiz_brain.executor&quot;: &quot;Run&quot;,
-    &quot;Python.scoreboard.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/burakkaya/Documents/Github/Py4Society/Day026-Intermediate/Nato-Alpha&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python.car_manager.executor": "Run",
+    "Python.example.executor": "Run",
+    "Python.example2.executor": "Run",
+    "Python.example3.executor": "Run",
+    "Python.example4.executor": "Run",
+    "Python.example5.executor": "Run",
+    "Python.main.executor": "Run",
+    "Python.part2.executor": "Run",
+    "Python.part3.executor": "Run",
+    "Python.player.executor": "Run",
+    "Python.python script.py one two three.executor": "Run",
+    "Python.quiz_brain.executor": "Run",
+    "Python.scoreboard.executor": "Run",
+    "Python.user.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/burakkaya/Documents/Github/Py4Society/Day026-Intermediate/Nato-Alpha",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day026-Intermediate/Nato-Alpha" />
@@ -108,7 +111,7 @@
       <workItem from="1719909508528" duration="35838000" />
       <workItem from="1720443366853" duration="11170000" />
       <workItem from="1720722060536" duration="41000" />
-      <workItem from="1720722109676" duration="677000" />
+      <workItem from="1720722109676" duration="1299000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
@@ -140,11 +143,12 @@
     <option name="LAST_COMMIT_MESSAGE" value="pull from origin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1720723550359" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day030-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1720724187911" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day025-Intermediate/TrackProject" />
     <SUITE FILE_PATH="coverage/Py4Society$part2.coverage" NAME="part2 Coverage Results" MODIFIED="1719310145252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
     <SUITE FILE_PATH="coverage/Py4Society$scoreboard.coverage" NAME="scoreboard Coverage Results" MODIFIED="1720255396676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day024-Intermediate/Snake" />
     <SUITE FILE_PATH="coverage/Py4Society$example3.coverage" NAME="example3 Coverage Results" MODIFIED="1720552378835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
-    <SUITE FILE_PATH="coverage/Py4Society$example2.coverage" NAME="example2 Coverage Results" MODIFIED="1720552026867" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$example2.coverage" NAME="example2 Coverage Results" MODIFIED="1720723601989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day030-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$user.coverage" NAME="user Coverage Results" MODIFIED="1720724185024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day025-Intermediate/TrackProject" />
     <SUITE FILE_PATH="coverage/Py4Society$player.coverage" NAME="player Coverage Results" MODIFIED="1719946843978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
     <SUITE FILE_PATH="coverage/Py4Society$quiz_brain.coverage" NAME="quiz_brain Coverage Results" MODIFIED="1719679452091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
     <SUITE FILE_PATH="coverage/Py4Society$example5.coverage" NAME="example5 Coverage Results" MODIFIED="1720552583964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />

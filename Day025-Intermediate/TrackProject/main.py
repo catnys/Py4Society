@@ -66,6 +66,15 @@ def writeUsers2Csv(file_path, users):
             writer.writerow(row)
 
 
+def addDay2Users(users, date_str, scores):
+    for user in users:
+        user.addDay(date_str, 0)  # Initialize all users' scores for the new day to 0
+    for user in users:
+        if user.name in scores:
+            user.addDay(date_str, scores[user.name])  # Update with provided scores
+            user.totalScore += scores[user.name]  # Correct the total score increment
+
+
 def displayUsers(users):
     for user in users:
         print(user)
@@ -88,6 +97,14 @@ def main():
         '10.07.2024': 4
     }
     createUser(users, newUserName, newUserTotalScore, newUserScores)
+
+    # Example usage of adding a new day with scores
+    newDay = '11.07.2024'
+    newDayScores = {
+        "New User": 5,
+        "Dua Lipa": 7  # Ensure the user names are correct
+    }
+    addDay2Users(users, newDay, newDayScores)
 
     # Write updated users back to CSV
     writeUsers2Csv(file_path, users)
