@@ -142,8 +142,8 @@ def main():
 
     # Parameters
     message = "cccex"
-    username = "Dua Lipa"
-    date = '11.07.2024'
+    username = "Taylor Swift"
+    date = '15.07.2024'
 
     # Evaluate the message
     dailyScore = evaluateMessage(message)
@@ -154,7 +154,13 @@ def main():
         # Add the daily score to the user's record
         user.addDay(date, dailyScore)
     else:
-        print(f"User '{username}' not found")
+        # If user does not exist, create the user with all previous scores set to 0
+        existingDates = {date.strftime('%d.%m.%Y'): 0 for date in users[0].days.keys()}
+        createUser(users, username, dailyScore, existingDates)
+        # Now find the user again and add the daily score
+        user = findUserByName(users, username)
+        if user:
+            user.addDay(date, dailyScore)
 
     # Write the updated users back to the CSV
     writeUsers2Csv(file_path, users)
