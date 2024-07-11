@@ -135,11 +135,17 @@ def displayUsers(users):
 
 def main():
     """main method"""
-    """
+
     file_path = 'data.csv'  # Ensure this is the correct path to your CSV file
     users = readUsersFromCsv(file_path)
 
     displayUsers(users)
+
+    userMessage = "cccex"
+    userName = "Dua Lipa"
+    date = '11.07.2024'
+    userScore = evaluateMessage(userMessage)
+    print("-----")
 
     newUserName = "New User"
     newUserTotalScore = 20
@@ -166,9 +172,10 @@ def main():
     displayUsers(users)
     print("-----")
     findUserScoreOnDate(users, "Dua Lipa", '11.07.2024')
-    """
+
 
     message = "cccex"
+    username = "Dua Lipa"
     print("-----")
     evaluateMessage(message)
 
