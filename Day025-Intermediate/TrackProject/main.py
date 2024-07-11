@@ -89,11 +89,15 @@ def checkCharacterInList(message: str, charList: list):
     return False
 
 
-def calculatePoints(letter):
-    if letter == 'c':
-        points = 5
-    elif letter == 'e':
-        points = 1
+def calculatePoints(letter: str, allowedChars: list):
+    points = 0
+    for element in allowedChars:
+        if element['char'] == letter:
+            points += element['points']
+            # print(f"{letter}: {element['points']}")
+
+    return points
+
 
 
 def evaluateMessage(message: str):
@@ -118,6 +122,10 @@ def evaluateMessage(message: str):
 
     for char in list(message):
         print(char)
+        totalPoints += calculatePoints(char, allowedChars)
+    print(totalPoints)
+
+    return totalPoints
 
 def displayUsers(users):
     """display all users"""
