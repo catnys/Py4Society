@@ -1,6 +1,8 @@
 import csv
-from datetime import datetime
 from user import User
+from typing import List, Dict
+from datetime import datetime, timedelta
+from typing import List, Dict
 
 
 def readUsersFromCsv(file_path='data.csv'):
@@ -81,6 +83,20 @@ def addDay2Users(users, date_str, scores):
             user.totalScore += scores[user.name]  # Correct the total score increment
 
 
+def addMissingDates(users: List[User], end_date_str: str) -> None:
+    """Add missing dates for all users up to the specified end date"""
+    end_date = datetime.strptime(end_date_str, '%d.%m.%Y')
+    for user in users:
+        if user.days:
+            start_date = max(user.days.keys())
+        else:
+            start_date = end_date
+
+        current_date = start_date + timedelta(days=1)
+        while current_date <= end_date:
+            user.days[current_date] = 0
+            current_date += timedelta(days=1)
+
 def checkCharacterInList(message: str, charList: list):
     for char in message:
         for i in range(len(charList)):
@@ -134,16 +150,17 @@ def displayUsers(users):
 
 
 def main():
-    """main method"""
-
     """Main method"""
     file_path = 'data.csv'
     users = readUsersFromCsv(file_path)
 
     # Parameters
-    message = "cccex"
-    username = "Taylor Swift"
-    date = '15.07.2024'
+    message = "ccccc"
+    username = "Dua Lipa"
+    date = '11.07.2024'
+
+    # Add missing dates for all users
+    addMissingDates(users, date)
 
     # Evaluate the message
     dailyScore = evaluateMessage(message)
@@ -155,8 +172,8 @@ def main():
         user.addDay(date, dailyScore)
     else:
         # If user does not exist, create the user with all previous scores set to 0
-        existingDates = {date.strftime('%d.%m.%Y'): 0 for date in users[0].days.keys()}
-        createUser(users, username, dailyScore, existingDates)
+        existingDates = {date_str: 0 for date_str in sorted([date.strftime('%d.%m.%Y') for date in users[0].days.keys()])}
+        createUser(users, username, existingDates)
         # Now find the user again and add the daily score
         user = findUserByName(users, username)
         if user:
