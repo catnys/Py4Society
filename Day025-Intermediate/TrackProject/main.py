@@ -141,43 +141,29 @@ def main():
 
     displayUsers(users)
 
-    userMessage = "cccex"
-    userName = "Dua Lipa"
-    date = '11.07.2024'
-    userScore = evaluateMessage(userMessage)
-    print("-----")
-
-    newUserName = "New User"
-    newUserTotalScore = 20
-    newUserScores = {
-        '6.07.2024': 4,
-        '7.07.2024': 3,
-        '8.07.2024': 5,
-        '9.07.2024': 4,
-        '10.07.2024': 4
-    }
-    createUser(users, newUserName, newUserTotalScore, newUserScores)
-
-    # Example usage of adding a new day with scores
-    newDay = '11.07.2024'
-    newDayScores = {
-        "New User": 5,
-        "Dua Lipa": 7  # Ensure the user names are correct
-    }
-    addDay2Users(users, newDay, newDayScores)
-
-    # Write updated users back to CSV
-    writeUsers2Csv(file_path, users)
-
-    displayUsers(users)
-    print("-----")
-    findUserScoreOnDate(users, "Dua Lipa", '11.07.2024')
-
-
+    
+    # Parameters
     message = "cccex"
     username = "Dua Lipa"
-    print("-----")
-    evaluateMessage(message)
+    date = '11.07.2024'
+
+    # Evaluate the message
+    dailyScore = evaluateMessage(message)
+
+    # Find the user
+    user = findUserByName(users, username)
+    if user:
+        # Add the daily score to the user's record
+        user.addDay(date, dailyScore)
+        # Update the total score
+        user.totalScore += dailyScore
+    else:
+        print(f"User '{username}' not found")
+
+    # Write the updated users back to the CSV
+    writeUsers2Csv(file_path, users)
+    displayUsers(users)
+    findUserScoreOnDate(users, username, date)
 
 
 if __name__ == "__main__":

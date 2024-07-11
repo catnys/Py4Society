@@ -22,8 +22,10 @@ class User:
 
     def addDay(self, dateString: str, score: int) -> None:
         date = datetime.strptime(dateString, '%d.%m.%Y')
+        if date in self.days:
+            self.totalScore -= self.days[date]  # Subtract the old score
         self.days[date] = score
-        self.totalScore += score
+        self.totalScore += score  # Add the new score
 
     def __repr__(self):
         return f"User(name={self.name}, totalScore={self.totalScore}, days={self.days})"
