@@ -156,8 +156,8 @@ def main():
 
     # Parameters
     message = "ccccc"
-    username = "Dua Lipa"
-    date = '11.07.2024'
+    username = "Taylor Swift"
+    date = '12.07.2024'
 
     # Add missing dates for all users
     addMissingDates(users, date)
