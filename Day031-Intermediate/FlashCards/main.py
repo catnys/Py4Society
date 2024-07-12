@@ -12,7 +12,7 @@ canvas.create_image(400, 263, image=cardFrontImg)
 canvas.create_text(400, 150, text="Title", font=("Ariel", 40, "italic", "underline"), fill="black")
 canvas.create_text(400, 263, text="Word", font=("Ariel", 60, "bold"), fill="black")
 canvas.config(highlightthickness=0, bg=BACKGROUND_COLOR)
-canvas.grid(row=0, column=0)
+canvas.grid(row=0, column=0,columnspan=2)
 
 wrongImg = PhotoImage(file="images/wrong.png")
 unknownButton = Button(image=wrongImg, highlightthickness=0)
