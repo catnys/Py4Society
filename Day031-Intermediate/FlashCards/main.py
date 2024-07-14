@@ -1,25 +1,31 @@
 import csv
-from tkinter import *
 import os
+from tkinter import *
 from tkinter import messagebox
 
 backgroundColor = "#B1DDC6"
 
-
 # Helper Functions
 def loadData(filepath):
-    with open(filepath, encoding='utf-8') as file:
-        reader = csv.reader(file)
-        # Skip header
-        next(reader)
-        return [{"German": german, "English": english} for german, english in reader]
-
+    try:
+        with open(filepath, encoding='utf-8') as file:
+            reader = csv.reader(file)
+            # Skip header
+            next(reader)
+            return [{"German": german, "English": english} for german, english in reader]
+    except FileNotFoundError:
+        print(f"Error: The file {filepath} was not found.")
+        return []
 
 def saveUnknownWord(wordPair, filepath):
     with open(filepath, mode='a', newline='', encoding='utf-8') as file:
         writer = csv.writer(file)
         writer.writerow([wordPair['German'], wordPair['English']])
 
+def showEnglish():
+    global currentWord
+    if currentWord:
+        canvas.itemconfig(cardWord, text=currentWord['English'])
 
 def nextCard():
     global currentWord
@@ -27,20 +33,18 @@ def nextCard():
         currentWord = words.pop()
         canvas.itemconfig(cardTitle, text="German")
         canvas.itemconfig(cardWord, text=currentWord['German'])
+        window.after(3000, showEnglish)
     else:
         messagebox.showinfo("End", "No more cards left!")
         window.destroy()
 
-
 def knownWord():
     nextCard()
-
 
 def unknownWord():
     if currentWord:
         saveUnknownWord(currentWord, "unknown_words.csv")
     nextCard()
-
 
 def setupGui():
     global window, canvas, cardTitle, cardWord
@@ -69,6 +73,6 @@ def setupGui():
 
 if __name__ == "__main__":
     print("Current working directory:", os.getcwd())
-    words = loadData("data/words.csv")
+    words = loadData("data/words.csv")  # Adjust the path based on your folder structure
     currentWord = None
     setupGui()
