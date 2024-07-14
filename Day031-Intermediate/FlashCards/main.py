@@ -22,6 +22,10 @@ def saveUnknownWord(wordPair, filepath):
         writer = csv.writer(file)
         writer.writerow([wordPair['German'], wordPair['English']])
 
+def showEnglish():
+    global currentWord
+    if currentWord:
+        canvas.itemconfig(cardWord, text=currentWord['English'])
 
 def nextCard():
     global currentWord
