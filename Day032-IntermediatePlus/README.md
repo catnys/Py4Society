@@ -1,7 +1,5 @@
 # `Day 32 - Intermediate+`
 
-
-
 # CSV to Dictionary List in Python
 
 This guide explains how to read data from a CSV file and convert it into a list of dictionaries in Python. The `csv` module in Python makes it easy to work with CSV files.
