@@ -1,6 +1,6 @@
 import smtplib
-from emailObj.mime.text import MIMEText
-from emailObj.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.multipart import MIMEMultipart
 from emailObj import Email
 
 def createMessage(sender, receiver, subject, body):
@@ -23,7 +23,8 @@ def main():
     receiver = "<EMAIL>"
     subject = "Motivation Reminder"
     body = "Hello World!"
-    email = Email(sender, receiver, subject, body)
+    password = "<PASSWORD>"
+    email = Email(sender, receiver, subject, body,password)
     message = createMessage(sender, receiver, subject, body)
 
     # Connect to the SMTP server
