@@ -1,7 +1,7 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
+from email import Email
 
 def createMessage(sender, receiver, subject, body):
     # Create the email content
@@ -23,6 +23,7 @@ def main():
     receiver = "<EMAIL>"
     subject = "Motivation Reminder"
     body = "Hello World!"
+    email = Email(sender, receiver, subject, body)
     message = createMessage(sender, receiver, subject, body)
 
     # Connect to the SMTP server
@@ -34,7 +35,7 @@ def main():
         server.login(sender_email, password)
 
         # Send the email
-        server.sendmail(sender_email, receiver_email, message.as_string())
+        server.sendmail(email.getSender(), email.getReceiver(), message.as_string())
         print("Email sent successfully!")
     except Exception as e:
         print(f"Error: {e}")

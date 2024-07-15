@@ -1,13 +1,13 @@
-import this
+import self
 
 
 class Email:
     def __init__(self,sender,receiver,subject,body,password):
-        this.sender=sender
-        this.receiver=receiver
-        this.subject=subject
-        this.body=body
-        this.password=password
+        self.sender=sender
+        self.receiver=receiver
+        self.subject=subject
+        self.body=body
+        self.password=password
 
 # define getters and setters
 
