@@ -13,3 +13,14 @@ def createMessage(sender, receiver, subject, body):
     # Attach the body text
     message.attach(MIMEText(body, "plain"))
     return message
+
+def main():
+    sender = "<EMAIL>"
+    receiver = "<EMAIL>"
+    subject = "Motivation Reminder"
+    body = "Hello World!"
+    message = createMessage(sender, receiver, subject, body)
+
+
+if __name__ == "__main__":
+    main()
