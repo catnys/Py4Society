@@ -1,7 +1,7 @@
 import smtplib
-from email.mime.text import MIMEText
-from email.mime.multipart import MIMEMultipart
-from email import Email
+from emailObj.mime.text import MIMEText
+from emailObj.mime.multipart import MIMEMultipart
+from emailObj import Email
 
 def createMessage(sender, receiver, subject, body):
     # Create the email content
