@@ -12,3 +12,4 @@ def createMessage(sender, receiver, subject, body):
 
     # Attach the body text
     message.attach(MIMEText(body, "plain"))
+    return message
