@@ -5,7 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change beforePath="$PROJECT_DIR$/Day033-IntermediatePlus/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day033-IntermediatePlus/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day034-IntermediatePlus/Quizzler/data.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day034-IntermediatePlus/Quizzler/images/false.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day034-IntermediatePlus/Quizzler/images/true.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day034-IntermediatePlus/Quizzler/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day034-IntermediatePlus/Quizzler/question_model.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day034-IntermediatePlus/Quizzler/quiz_brain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day034-IntermediatePlus/Quizzler/ui.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,7 +67,7 @@
     "Python.user.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day033-IntermediatePlus/ISS",
+    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day034-IntermediatePlus",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -73,11 +79,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day034-IntermediatePlus" />
       <recent name="$PROJECT_DIR$/Day033-IntermediatePlus/ISS" />
       <recent name="$PROJECT_DIR$/Day033-IntermediatePlus/KayneAPI" />
       <recent name="$PROJECT_DIR$/Day032-IntermediatePlus/BirthdayReminder" />
       <recent name="$PROJECT_DIR$/Day026-Intermediate/Nato-Alpha" />
-      <recent name="$PROJECT_DIR$/Day025-Intermediate/US-States" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day033-IntermediatePlus/ISS" />
@@ -113,7 +119,7 @@
       <workItem from="1720722060536" duration="41000" />
       <workItem from="1720722109676" duration="6934000" />
       <workItem from="1721513337486" duration="1879000" />
-      <workItem from="1721515230133" duration="2187000" />
+      <workItem from="1721515230133" duration="2221000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
