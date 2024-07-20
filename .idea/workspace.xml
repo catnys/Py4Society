@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
+      <change beforePath="$PROJECT_DIR$/.idea/Py4Society.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Py4Society.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Day032-IntermediatePlus/playground/playground.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day032-IntermediatePlus/playground/playground.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day033-IntermediatePlus/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day033-IntermediatePlus/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,13 +63,13 @@
     "Python.user.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/burakkaya/Documents/Github/Py4Society/Day032-IntermediatePlus/BirthdayReminder",
+    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -90,8 +92,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
-        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-PY-241.18034.82" />
+        <option value="bundled-python-sdk-975db3bf15a3-2767605e8bc2-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.18034.82" />
       </set>
     </attachedChunks>
   </component>
@@ -112,6 +114,7 @@
       <workItem from="1720443366853" duration="11170000" />
       <workItem from="1720722060536" duration="41000" />
       <workItem from="1720722109676" duration="6934000" />
+      <workItem from="1721513337486" duration="792000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
@@ -143,20 +146,20 @@
     <option name="LAST_COMMIT_MESSAGE" value="pull from origin" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1721073980725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day032-IntermediatePlus/MotivationReminder" />
-    <SUITE FILE_PATH="coverage/Py4Society$part2.coverage" NAME="part2 Coverage Results" MODIFIED="1719310145252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
-    <SUITE FILE_PATH="coverage/Py4Society$scoreboard.coverage" NAME="scoreboard Coverage Results" MODIFIED="1720255396676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day024-Intermediate/Snake" />
-    <SUITE FILE_PATH="coverage/Py4Society$example3.coverage" NAME="example3 Coverage Results" MODIFIED="1720552378835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
-    <SUITE FILE_PATH="coverage/Py4Society$example2.coverage" NAME="example2 Coverage Results" MODIFIED="1720723601989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day030-Intermediate" />
-    <SUITE FILE_PATH="coverage/Py4Society$user.coverage" NAME="user Coverage Results" MODIFIED="1720724185024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day025-Intermediate/TrackProject" />
-    <SUITE FILE_PATH="coverage/Py4Society$player.coverage" NAME="player Coverage Results" MODIFIED="1719946843978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
-    <SUITE FILE_PATH="coverage/Py4Society$quiz_brain.coverage" NAME="quiz_brain Coverage Results" MODIFIED="1719679452091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
-    <SUITE FILE_PATH="coverage/Py4Society$example5.coverage" NAME="example5 Coverage Results" MODIFIED="1720552583964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
-    <SUITE FILE_PATH="coverage/Py4Society$playground.coverage" NAME="playground Coverage Results" MODIFIED="1721156883194" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day032-IntermediatePlus/playground" />
-    <SUITE FILE_PATH="coverage/Py4Society$car_manager.coverage" NAME="car_manager Coverage Results" MODIFIED="1719947472996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
-    <SUITE FILE_PATH="coverage/Py4Society$part3.coverage" NAME="part3 Coverage Results" MODIFIED="1719312829895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
-    <SUITE FILE_PATH="coverage/Py4Society$example4.coverage" NAME="example4 Coverage Results" MODIFIED="1720552511415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$playground.coverage" NAME="playground Coverage Results" MODIFIED="1721513650306" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day032-IntermediatePlus/playground" />
     <SUITE FILE_PATH="coverage/Py4Society$example.coverage" NAME="example Coverage Results" MODIFIED="1720551996434" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$example5.coverage" NAME="example5 Coverage Results" MODIFIED="1720552583964" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$example2.coverage" NAME="example2 Coverage Results" MODIFIED="1720723601989" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day030-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$part2.coverage" NAME="part2 Coverage Results" MODIFIED="1719310145252" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
+    <SUITE FILE_PATH="coverage/Py4Society$quiz_brain.coverage" NAME="quiz_brain Coverage Results" MODIFIED="1719679452091" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day017-Intermediate/quiz-game" />
+    <SUITE FILE_PATH="coverage/Py4Society$scoreboard.coverage" NAME="scoreboard Coverage Results" MODIFIED="1720255396676" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day024-Intermediate/Snake" />
+    <SUITE FILE_PATH="coverage/Py4Society$part3.coverage" NAME="part3 Coverage Results" MODIFIED="1719312829895" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day008-Beginner/Caesar-Cyper" />
+    <SUITE FILE_PATH="coverage/Py4Society$player.coverage" NAME="player Coverage Results" MODIFIED="1719946843978" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
+    <SUITE FILE_PATH="coverage/Py4Society$car_manager.coverage" NAME="car_manager Coverage Results" MODIFIED="1719947472996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day023-Intermediate/Turtle-Crossing" />
+    <SUITE FILE_PATH="coverage/Py4Society$example3.coverage" NAME="example3 Coverage Results" MODIFIED="1720552378835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$user.coverage" NAME="user Coverage Results" MODIFIED="1720724185024" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day025-Intermediate/TrackProject" />
     <SUITE FILE_PATH="coverage/Py4Society$python_script_py_one_two_three.coverage" NAME="python script.py one two three Coverage Results" MODIFIED="1720445954394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
+    <SUITE FILE_PATH="coverage/Py4Society$main.coverage" NAME="main Coverage Results" MODIFIED="1721073980725" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day032-IntermediatePlus/MotivationReminder" />
+    <SUITE FILE_PATH="coverage/Py4Society$example4.coverage" NAME="example4 Coverage Results" MODIFIED="1720552511415" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Day027-Intermediate" />
   </component>
 </project>
