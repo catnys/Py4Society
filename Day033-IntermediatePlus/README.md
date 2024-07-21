@@ -69,8 +69,6 @@ data = '{"name": "John", "age": 30}'
 person = json.loads(data) print(person['name'])
 ```
 
-
-
 ### Sending Data with POST Requests
 
 To send data to an API, you can use the `requests.post()` method. Here's an example:
