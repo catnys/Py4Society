@@ -18,11 +18,11 @@ class QuizInterface:
         self.questionText = self.canvas.create_text(150, 125, text="Some quest text", width=250, fill=THEME_COLOR, font="Arial 20 italic")
         self.canvas.grid(row=1, column=0,columnspan=2, pady=50)
         trueImg = PhotoImage(file="images/true.png")
-        self.trueButton = Button(image=trueImg, highlightthickness=0)
+        self.trueButton = Button(image=trueImg, highlightthickness=0,command=self.trueButtonPressed)
         self.trueButton.grid(row=2, column=0)
 
         falseImg = PhotoImage(file="images/false.png")
-        self.falseButton = Button(image=falseImg, highlightthickness=0)
+        self.falseButton = Button(image=falseImg, highlightthickness=0,command=self.falseButtonPressed)
         self.falseButton.grid(row=2, column=1)
 
 
@@ -33,3 +33,10 @@ class QuizInterface:
     def getNextQuestion(self):
         qtext = self.quiz.next_question()
         self.canvas.itemconfig(self.questionText, text=qtext)
+
+    def trueButtonPressed(self):
+        self.quiz.check_answer("True")
+
+
+    def falseButtonPressed(self):
+        self.quiz.check_answer("False")
