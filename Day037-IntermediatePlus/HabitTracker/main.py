@@ -6,6 +6,7 @@ PIXELA_API_KEY = "<KEY>"
 TOKEN = "<TOKEN>"
 USERNAME = "katniss"
 GRAPH_ID = "<GRAPH_ID>"
+TODAY = datetime.date.today()
 
 
 PIXELA_GRAPH_ENDPOINT = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs"
@@ -52,4 +53,23 @@ print(response.json())
 """
 
 print(TODAY.strftime("%d/%m/%Y"))
+
+
+update_endpoint = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs/{GRAPH_ID}/{TODAY.strftime('%Y%m%d')}"
+
+new_pixel_data = {
+    "quantity": "4.5"
+}
+
+## PUT
+# response = requests.put(url=update_endpoint, json=new_pixel_data, headers=headers)
+# print(response.text)
+
+
+delete_endpoint = f"{PIXELA_GRAPH_ENDPOINT}/{GRAPH_ID}/{TODAY.strftime('%Y%m%d')}"
+
+
+## DELETE
+# response = requests.delete(url=delete_endpoint, headers=headers)
+# print(response.text)
 
