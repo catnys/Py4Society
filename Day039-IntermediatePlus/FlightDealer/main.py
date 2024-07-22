@@ -1,12 +1,8 @@
 import requests
+from flight import Flight
+AMADEUS_BASE = ""
+AMADEUS_FLIGHT_OFFERS_ENDPOINT = "shopping/flight-offers"
 
+flight = Flight("LAX", "JFK", "2023-04-01", "2023-04-15", "2", 0, "Economy", "USD", 500)
 
-
-
-
-def main():
-    """Main function to perform operations on the project."""
-    print("Hello")
-
-if __name__ == '__main__':
-    main()
+print(flight)

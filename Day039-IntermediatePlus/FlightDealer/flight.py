@@ -1,6 +1,11 @@
-
+import enum
+from TravelClass import TravelClass
 class Flight:
-    def __init__(self, originLocationCode, destinationLocationCode,departureDate,returnDate,adults, children, travelClass,currencyCode, maxPrice):
+    def __init__(self, originLocationCode: str, destinationLocationCode: str,departureDate: str,returnDate: str = None, adults: int = 1, children: int = None, travelClass: TravelClass = None,currencyCode: str = None , maxPrice: int = None) -> None:
+        if not originLocationCode or not destinationLocationCode or not departureDate or not returnDate:
+            raise TypeError(
+                "Compulsory parameters (originLocationCode, destinationLocationCode, departureDate, returnDate) must be provided.")
+
         self.originLocationCode = originLocationCode
         self.destinationLocationCode = destinationLocationCode
         self.departureDate = departureDate
@@ -10,6 +15,10 @@ class Flight:
         self.travelClass = travelClass
         self.currencyCode = currencyCode
         self.maxPrice = maxPrice
+
+    def __str__(self) -> str:
+        return f"Flight from {self.originLocationCode} to {self.destinationLocationCode}, departing on {self.departureDate} and returning on {self.returnDate}. Adults: {self.adults}, Children: {self.children}, Travel Class: {self.travelClass}, Currency: {self.currencyCode}, Max Price: {self.maxPrice}"
+
 
     # Getters and Setters
 
