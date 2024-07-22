@@ -1,7 +1,12 @@
-import enum
+from datetime import datetime
+
 from TravelClass import TravelClass
+
+
 class Flight:
-    def __init__(self, originLocationCode: str, destinationLocationCode: str,departureDate: str,returnDate: str = None, adults: int = 1, children: int = None, travelClass: TravelClass = None,currencyCode: str = None , maxPrice: int = None) -> None:
+    def __init__(self, originLocationCode: str, destinationLocationCode: str, departureDate: str,
+                 returnDate: str = None, adults: int = 1, children: int = None, travelClass: TravelClass = None,
+                 currencyCode: str = None, maxPrice: int = None) -> None:
         if not originLocationCode or not destinationLocationCode or not departureDate or not returnDate:
             raise TypeError(
                 "Compulsory parameters (originLocationCode, destinationLocationCode, departureDate, returnDate) must be provided.")
@@ -18,6 +23,17 @@ class Flight:
 
     def __str__(self) -> str:
         return f"Flight from {self.originLocationCode} to {self.destinationLocationCode}, departing on {self.departureDate} and returning on {self.returnDate}. Adults: {self.adults}, Children: {self.children}, Travel Class: {self.travelClass}, Currency: {self.currencyCode}, Max Price: {self.maxPrice}"
+
+    # Custom Methods
+
+    def checkDateFormat(self, date):
+        # Validate departureDate format
+        try:
+            datetime.strptime(date, '%Y-%m-%d')
+            return True
+        except ValueError:
+            raise ValueError("Invalid date format. Expected YYYY-MM-DD")
+
 
 
     # Getters and Setters
@@ -75,5 +91,3 @@ class Flight:
 
     def setMaxPrice(self, maxPrice):
         self.maxPrice = maxPrice
-
-
