@@ -1,32 +1,19 @@
 import requests
 from datetime import datetime
 
-APP_ID = "<YOUR-APP-ID>"
-APP_KEY = '<YOUR KEY HERE>'
+APP_ID = "<YOUR_APP_ID>"
+APP_KEY = '<YOUR_APP_KEY>'
 NLP_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
 SHEETY_ENDPOINT = "https://api.sheety.co/7ebd65597e9bab5f78f93992004eb226/myWorkouts/workouts"
 
-GENDER = "female"
-WEIGHT_KG = "45"
-HEIGHT_CM = "1.82"
-AGE = "22"
-
-GENDER = "<YOUR GENDER HERE>"
-WEIGHT_KG = "<YOUR WEIGHT KG HERE>"
-HEIGHT_CM = "<YOUR HEIGHT CM HERE>"
-AGE = "<YOUR AGE HERE>"
+GENDER = "<YOUR_GENDER>"
+WEIGHT_KG = "<YOUR_WEIGHT_KG>"
+HEIGHT_CM = "<YOUR_HEIGHT_CM>"
+AGE = "<YOUR_AGE>"
 TODAY = datetime.now().strftime("%m/%d/%Y")
 NOW = datetime.now().strftime("%H:%M:%S")
 
-
-# Methods
-def readExcel(response):
-    """Reads excel file and returns list of rows"""
-
-def writeExcel(workout, rows):
-    """Writes excel file to workout"""
-
-exercise = "Running for 15 minutes."  # input("Tell me which exercises you did: ")
+exercisInput = input("Tell me which exercises you did: ")
 
 headers = {
     "Content-Type": "application/json",
@@ -35,18 +22,40 @@ headers = {
 }
 
 nutritionConfig = {
-    "query": exercise
+    "query": exercisInput
 }
 
 # POST Nutritionix API
+
 response = requests.post(url=NLP_ENDPOINT, json=nutritionConfig, headers=headers)
+result = response.json()
 duration = response.json()["exercises"][0]["duration_min"]
 sport = response.json()["exercises"][0]["user_input"]
 calories = response.json()["exercises"][0]["nf_calories"]
 
-print(f"{TODAY} | {NOW} | {sport} | {duration} | {calories}")
-print(response.json())
+#########
 
+headers = {
+    "Authorization": "Bearer Howimetyourmother"
+}
 
+"""
 # GET from Sheety API
+result = requests.post(url=SHEETY_ENDPOINT, headers=headers)
+"""
 
+# POST for Sheety API
+
+for exercise in result["exercises"]:
+    data2send = {
+        "workout": {
+                    "Date": TODAY,
+                    "Time": NOW,
+                    "Exercise": sport,
+                    "Duration": duration,
+                    "Calories": calories
+                    }
+    }
+
+    responseSheetPost = requests.post(url=SHEETY_ENDPOINT, json=data2send, headers=headers)
+    print(responseSheetPost.json())
