@@ -2,7 +2,7 @@ import requests
 from datetime import datetime, timedelta
 from twilio.rest import Client
 
-API_KEY = 'VJK9F5FJPPAZBTXD'
+API_KEY = '<KEY>'
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 TODAY = "2024-07-19"
