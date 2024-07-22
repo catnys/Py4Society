@@ -1,40 +1,78 @@
 import requests
+from datetime import datetime, timedelta
+from twilio.rest import Client
 
-API_KEY = '<KEY>'
+API_KEY = 'VJK9F5FJPPAZBTXD'
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
+TODAY = "2024-07-19"
+TODAY_AS_DATE = datetime.strptime(TODAY, "%Y-%m-%d")
+TWILIO_ACCOUNT_SID = 'your_twilio_account_sid'
+TWILIO_AUTH_TOKEN = 'your_twilio_auth_token'
+TWILIO_PHONE_NUMBER = 'your_twilio_phone_number'
+NEWS_API_KEY = 'your_news_api_key_here'
+client = Client(TWILIO_ACCOUNT_SID, TWILIO_AUTH_TOKEN)
 
-## STEP 1: Use https://www.alphavantage.co
-# When STOCK price increase/decreases by 5% between yesterday and the day before yesterday then print("Get News").
 
-# replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-url = 'https://www.alphavantage.co/query'
-# ?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo
-# Adjust params
+
+def get_top_headlines(company_name):
+    url = f"https://newsapi.org/v2/everything?q={company_name}&apiKey={NEWS_API_KEY}"
+    response = requests.get(url)
+    articles = response.json()['articles'][:3]  # Get the first 3 articles
+    return articles
+
+
+def send_sms(message_body):
+    client.messages.create(
+        body=message_body,
+        from_=TWILIO_PHONE_NUMBER,
+        to='your_phone_number'
+    )
+
+
+# Assuming the variables API_KEY, STOCK, COMPANY_NAME, and TODAY are defined as shown previously
+
+# Step 1: Fetch stock data
 parameters = {
     'function': 'TIME_SERIES_DAILY',
     'symbol': STOCK,
     'apikey': API_KEY,
 }
-r = requests.get(url=url,params=parameters)
+r = requests.get(url=url, params=parameters)
 data = r.json()
+days = data['Time Series (Daily)']
 
-print(data)
-## STEP 2: Use https://newsapi.org
-# Instead of printing ("Get News"), actually get the first 3 news pieces for the COMPANY_NAME. 
+# Initialize variables for the loop
+previous_day_date = TODAY - timedelta(days=1)
+previous_day_str = previous_day_date.strftime("%Y-%m-%d")
+closing_price_today = None
+closing_price_previous_day = None
 
-## STEP 3: Use https://www.twilio.com
-# Send a seperate message with the percentage change and each article's title and description to your phone number. 
+# Loop through the days to find the significant change
+for day in reversed(list(days.keys())):
+    if day <= TODAY:
+        closing_price_today = float(data[TODAY]["4. close"])
+        closing_price_previous_day = float(data[day]["4. close"])
+        break
 
+# Calculate percentage change
+if closing_price_today and closing_price_previous_day:
+    percentage_change = ((closing_price_today - closing_price_previous_day) / closing_price_previous_day) * 100
+else:
+    percentage_change = 0
 
-#Optional: Format the SMS message like this: 
-"""
-TSLA: 🔺2%
-Headline: Were Hedge Funds Right About Piling Into Tesla Inc. (TSLA)?. 
-Brief: We at Insider Monkey have gone over 821 13F filings that hedge funds and prominent investors are required to file by the SEC The 13F filings show the funds' and investors' portfolio positions as of March 31st, near the height of the coronavirus market crash.
-or
-"TSLA: 🔻5%
-Headline: Were Hedge Funds Right About Piling Into Tesla Inc. (TSLA)?. 
-Brief: We at Insider Monkey have gone over 821 13F filings that hedge funds and prominent investors are required to file by the SEC The 13F filings show the funds' and investors' portfolio positions as of March 31st, near the height of the coronavirus market crash.
-"""
+# Step 2: Fetch news articles
+if abs(percentage_change) >= 5:
+    articles = get_top_headlines(COMPANY_NAME)
+    news_messages = []
+    for article in articles:
+        headline = article['title']
+        brief = article['description']
+        news_message = f"{STOCK}: {percentage_change:.2f}%\nHeadline: {headline}\nBrief: {brief}\n\n"
+        news_messages.append(news_message)
 
+    # Step 3: Send SMS
+    message_body = "\n".join(news_messages)
+    send_sms(message_body)
+else:
+    print("No significant change.")
