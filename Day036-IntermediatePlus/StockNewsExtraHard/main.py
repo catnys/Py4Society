@@ -12,14 +12,12 @@ url = 'https://www.alphavantage.co/query'
 # ?function=TIME_SERIES_DAILY&symbol=IBM&apikey=demo
 # Adjust params
 parameters = {
-    'function': 'TIME_SERIES_WEEKLY',
+    'function': 'TIME_SERIES_DAILY',
     'symbol': STOCK,
-    'apikey': 'demo',
+    'apikey': API_KEY,
 }
-r = requests.get(url)
+r = requests.get(url=url,params=parameters)
 data = r.json()
-
-print(data)
 
 print(data)
 ## STEP 2: Use https://newsapi.org
