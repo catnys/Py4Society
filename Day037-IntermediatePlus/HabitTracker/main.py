@@ -1,4 +1,5 @@
 import requests
+import datetime
 
 PIXELA_ENDPOINT = "https://pixe.la/v1/users"
 PIXELA_API_KEY = "<KEY>"
@@ -45,5 +46,10 @@ pixelData = {
     "quantity": "9.75"
 }
 
+""""
 response = requests.post(url=PIXELA_CREATE_PIXEL_ENDPOINT,json=pixelData, headers=headers)
 print(response.json())
+"""
+
+print(TODAY.strftime("%d/%m/%Y"))
+
