@@ -1,5 +1,7 @@
 # `DAY 36 - Intermediate+`
 
+![](StockNewsExtraHard/master.gif)
+
 # `REVISION` Understanding APIs: Types and RESTful APIs
 
 APIs (Application Programming Interfaces) are essential components in modern software development, allowing different applications to communicate and share data efficiently. There are several types of APIs, each designed for specific use cases and communication protocols. This document provides an overview of common API types and delves into the concept of RESTful APIs.
