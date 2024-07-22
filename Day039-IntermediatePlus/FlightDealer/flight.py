@@ -26,14 +26,42 @@ class Flight:
 
     # Custom Methods
 
-    def checkDateFormat(self, date):
-        # Validate departureDate format
+    def checkDateFormat(self, date: str) -> bool:
+        """
+        Validates if the provided date string is in the correct format ('YYYY-MM-DD').
+
+        This method attempts to parse the input date string using the datetime.strptime function with the specified format. If the parsing succeeds,
+        it implies the date string is in the correct format, and the method returns True. If the parsing fails due to a ValueError exception,
+        it means the date string does not match the expected format, and the method raises a ValueError with a descriptive message.
+
+        Args:
+            date (str): The date string to be validated.
+
+        Returns:
+            bool: True if the date string is in the correct format, False otherwise.
+
+        Raises:
+            ValueError: If the date string is not in the expected 'YYYY-MM-DD' format.
+        """
+        # Attempt to parse the date string with the expected format
         try:
             datetime.strptime(date, '%Y-%m-%d')
             return True
         except ValueError:
+            # Raise a ValueError if the date string does not match the expected format
             raise ValueError("Invalid date format. Expected YYYY-MM-DD")
 
+    def formatDate(self, date: datetime) -> str:
+        """
+        Formats a given date object into a string representing the date in 'YYYY-MM-DD' format.
+
+        Args:
+            date (datetime): The original date object to be formatted.
+
+        Returns:
+            str: The formatted date string.
+        """
+        return date.strftime("%Y-%m-%d")
 
 
     # Getters and Setters
