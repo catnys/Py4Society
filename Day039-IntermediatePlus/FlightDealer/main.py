@@ -1,5 +1,9 @@
 import requests
 from flight import Flight
+
+
+AMADEUS_API_KEY = '<KEY>'
+AMADEUS_API_SECRET = '<KEY>'
 AMADEUS_BASE = ""
 AMADEUS_FLIGHT_OFFERS_ENDPOINT = "shopping/flight-offers"
 
