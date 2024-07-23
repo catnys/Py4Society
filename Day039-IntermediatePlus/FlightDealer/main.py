@@ -29,10 +29,10 @@ def getBearerToken():
 AMADEUS_ACCESS_TOKEN = getBearerToken()
 
 
-flight = Flight(originLocationCode="LAX", destinationLocationCode="JFK", departureDate="2024-09-01")
+flight = Flight(originLocationCode="LAX", destinationLocationCode="IST", departureDate="2024-08-01",max=4)
 print(flight)
 
-"""
+
 headers = {'Authorization': 'Bearer ' + AMADEUS_ACCESS_TOKEN}
 
 parameters = {
@@ -40,8 +40,10 @@ parameters = {
     'destinationLocationCode': flight.getDestinationLocationCode(),
     'departureDate': flight.getDepartureDate(),
     'adults': flight.getAdults(),
+    'nonStop': flight.getNonStop(),
+    'max': flight.getMax(),
 }
 
 response = requests.get(url=CURRENT_ENDPOINT, params=parameters, headers=headers)
 print(response.json())
-"""
+

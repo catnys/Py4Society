@@ -6,7 +6,7 @@ from TravelClass import TravelClass
 class Flight:
     def __init__(self, originLocationCode: str, destinationLocationCode: str, departureDate: str,
                  returnDate: str = None, adults: int = 1, children: int = None, travelClass: TravelClass = None,
-                 currencyCode: str = None, maxPrice: int = None, nonStop: bool = None) -> None:
+                 currencyCode: str = None, max: int = None, maxPrice: int = None, nonStop: str = "true") -> None:
         if not originLocationCode or not destinationLocationCode or not departureDate or not adults:
             raise TypeError(
                 "Compulsory parameters (originLocationCode, destinationLocationCode, departureDate, returnDate) must be provided.")
@@ -19,6 +19,7 @@ class Flight:
         self.children = children
         self.travelClass = travelClass
         self.currencyCode = currencyCode
+        self.max = max
         self.maxPrice = maxPrice
         self.nonStop = nonStop
 
@@ -63,7 +64,6 @@ class Flight:
             str: The formatted date string.
         """
         return date.strftime("%Y-%m-%d")
-
 
     # Getters and Setters
 
@@ -114,6 +114,12 @@ class Flight:
 
     def setCurrencyCode(self, currencyCode):
         self.currencyCode = currencyCode
+
+    def getMax(self):
+        return self.max
+
+    def setMax(self, max):
+        self.max = max
 
     def getMaxPrice(self):
         return self.maxPrice
