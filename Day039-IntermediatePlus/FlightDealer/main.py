@@ -4,7 +4,6 @@ from flight import Flight
 
 AMADEUS_API_KEY = 'YOUR_API_KEY'
 AMADEUS_API_SECRET = 'YOUR_API_SECRET'
-AMADEUS_ACCESS_TOKEN = 'YOUR_ACCESS_TOKEN'
 
 AMADEUS_BASE = "https://test.api.amadeus.com/v2"
 AMADEUS_FLIGHT_OFFERS_ENDPOINT = "/shopping/flight-offers"
@@ -24,14 +23,16 @@ def getBearerToken():
     }
     response = requests.post(url=AUTH_URL, data=body)
     print(response.json()['access_token'])
+    return response.json()['access_token']
 
 
-getBearerToken()
+AMADEUS_ACCESS_TOKEN = getBearerToken()
 
-"""
+
 flight = Flight(originLocationCode="LAX", destinationLocationCode="JFK", departureDate="2024-09-01")
 print(flight)
 
+"""
 headers = {'Authorization': 'Bearer ' + AMADEUS_ACCESS_TOKEN}
 
 parameters = {
