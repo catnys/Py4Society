@@ -76,8 +76,28 @@ def displayFlightOffersInterval():
             print(f"No flight offers found for {single_date.strftime('%Y-%m-%d')}")
 
 
-# Call the function to display flight prices within the next 6 months
-displayFlightOffersInterval()
+def retrieveCities(filename="base_price_data.csv"):
+    """Function to return city names from file"""
+    # Load the CSV file, skipping the header row
+    df = pd.read_csv(filename, delimiter=';', skiprows=1)
+
+    # Correctly access the first column by its integer index
+    cityNames = df.iloc[:, 0].tolist()  # Using .iloc for integer-location based indexing
+
+    # Return the list of city names
+    return cityNames
+
+def main():
+    """Main function"""
+    # Retrieve city names and store them in a variable
+    cities = retrieveCities()
+
+    # Optionally, print the list of city names
+    print(cities)
+
+if __name__ == "__main__":
+    main()
 
 
-
+if __name__ == "__main__":
+    main()
