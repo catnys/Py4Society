@@ -1,5 +1,6 @@
 import requests
 import pandas as pd
+import csv
 from flight import Flight
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
@@ -9,6 +10,7 @@ AMADEUS_API_SECRET = 'YOUR_API_SECRET'
 
 AMADEUS_BASE = "https://test.api.amadeus.com/v2"
 AMADEUS_FLIGHT_OFFERS_ENDPOINT = "/shopping/flight-offers"
+AMADEUS_CITIES_ENDPOINT = "https://test.api.amadeus.com/v1/reference-data/locations/cities"
 AUTH_URL = "https://test.api.amadeus.com/v1/security/oauth2/token"
 
 TODAY = datetime.today().date()
@@ -78,27 +80,47 @@ def displayFlightOffersInterval():
 
 def retrieveCities(filename="base_price_data.csv"):
     """Function to return city names from file"""
-    # Load the CSV file, skipping the header row
-    df = pd.read_csv(filename, delimiter=';', skiprows=1)
 
-    # Correctly access the first column by its integer index
-    cityNames = df.iloc[:, 0].tolist()  # Using .iloc for integer-location based indexing
+    df = pd.read_csv(filename, sep=';', header=0)
 
-    # Return the list of city names
-    return cityNames
+    # Extract the first column into a list
+    first_column_list = df.iloc[:, 0].str.upper().tolist()
 
-def getIATA(cityList):
+    # Print the list
+    print(first_column_list)
+    return first_column_list
+
+
+def getIATA(cityNames):
     """Function to retrieve IATA"""
+    token = "nMMOUkr1eCx2sfHMpF4qfjHLi3uv" # getBearerToken()
 
+    headers = {
+        'Authorization': "Bearer " + token
+    }
+
+    for cityName in cityNames:
+        print(cityName)
+
+        parameters = {
+            "keyword": cityName
+        }
+
+        # Make the API call
+        response = requests.get(url=AMADEUS_CITIES_ENDPOINT, params=parameters, headers=headers)
+        data = response.json()
+        print(data)
 
 def main():
     """Main function"""
     # Retrieve city names and store them in a variable
     cities = retrieveCities()
 
-    # Optionally, print the list of city names
-    print(cities)
+    getIATA(cities)
+
+
+
+
 
 if __name__ == "__main__":
     main()
-
