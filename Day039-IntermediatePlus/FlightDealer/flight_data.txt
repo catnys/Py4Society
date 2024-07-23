@@ -1,0 +1,1044 @@
+{
+  "meta": {
+    "count": 8,
+    "links": {
+      "self": "https://test.api.amadeus.com/v2/shopping/flight-offers?originLocationCode=IST&destinationLocationCode=MUC&departureDate=2024-07-24&adults=1&nonStop=true"
+    }
+  },
+  "data": [
+    {
+      "type": "flight-offer",
+      "id": "1",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-23",
+      "lastTicketingDateTime": "2024-07-23",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT2H40M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "IST",
+                "at": "2024-07-24T04:20:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "terminal": "1",
+                "at": "2024-07-24T06:00:00"
+              },
+              "carrierCode": "TK",
+              "number": "1649",
+              "aircraft": {
+                "code": "73J"
+              },
+              "operating": {
+                "carrierCode": "TK"
+              },
+              "duration": "PT2H40M",
+              "id": "1",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "82.67",
+        "base": "9.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "82.67"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": False
+      },
+      "validatingAirlineCodes": [
+        "TK"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "82.67",
+            "base": "9.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "1",
+              "cabin": "ECONOMY",
+              "fareBasis": "UTCLO",
+              "brandedFare": "CL",
+              "brandedFareLabel": "ECOFLY",
+              "class": "U",
+              "includedCheckedBags": {
+                "weight": 0,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "1 PIECE X 8 KG CABIN BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL SERVICE",
+                  "isChargeable": False,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "STANDART SEAT SELECTION",
+                  "isChargeable": True,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ONLINE MESSAGE RIGHT",
+                  "isChargeable": False,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "2",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-23",
+      "lastTicketingDateTime": "2024-07-23",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT2H45M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "IST",
+                "at": "2024-07-24T13:10:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "terminal": "1",
+                "at": "2024-07-24T14:55:00"
+              },
+              "carrierCode": "TK",
+              "number": "1633",
+              "aircraft": {
+                "code": "333"
+              },
+              "operating": {
+                "carrierCode": "TK"
+              },
+              "duration": "PT2H45M",
+              "id": "4",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "82.67",
+        "base": "9.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "82.67"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": False
+      },
+      "validatingAirlineCodes": [
+        "TK"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "82.67",
+            "base": "9.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "4",
+              "cabin": "ECONOMY",
+              "fareBasis": "UTCLO",
+              "brandedFare": "CL",
+              "brandedFareLabel": "ECOFLY",
+              "class": "U",
+              "includedCheckedBags": {
+                "weight": 0,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "1 PIECE X 8 KG CABIN BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL SERVICE",
+                  "isChargeable": False,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "STANDART SEAT SELECTION",
+                  "isChargeable": True,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ONLINE MESSAGE RIGHT",
+                  "isChargeable": False,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "3",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-23",
+      "lastTicketingDateTime": "2024-07-23",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT2H45M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "IST",
+                "at": "2024-07-24T16:15:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "terminal": "1",
+                "at": "2024-07-24T18:00:00"
+              },
+              "carrierCode": "TK",
+              "number": "1635",
+              "aircraft": {
+                "code": "73H"
+              },
+              "operating": {
+                "carrierCode": "TK"
+              },
+              "duration": "PT2H45M",
+              "id": "5",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "82.67",
+        "base": "9.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "82.67"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": False
+      },
+      "validatingAirlineCodes": [
+        "TK"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "82.67",
+            "base": "9.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "5",
+              "cabin": "ECONOMY",
+              "fareBasis": "UTCLO",
+              "brandedFare": "CL",
+              "brandedFareLabel": "ECOFLY",
+              "class": "U",
+              "includedCheckedBags": {
+                "weight": 0,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "1 PIECE X 8 KG CABIN BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL SERVICE",
+                  "isChargeable": False,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "STANDART SEAT SELECTION",
+                  "isChargeable": True,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ONLINE MESSAGE RIGHT",
+                  "isChargeable": False,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "4",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-23",
+      "lastTicketingDateTime": "2024-07-23",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT2H45M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "IST",
+                "at": "2024-07-24T19:40:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "terminal": "1",
+                "at": "2024-07-24T21:25:00"
+              },
+              "carrierCode": "TK",
+              "number": "1637",
+              "aircraft": {
+                "code": "73J"
+              },
+              "operating": {
+                "carrierCode": "TK"
+              },
+              "duration": "PT2H45M",
+              "id": "6",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "82.67",
+        "base": "9.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "82.67"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": False
+      },
+      "validatingAirlineCodes": [
+        "TK"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "82.67",
+            "base": "9.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "6",
+              "cabin": "ECONOMY",
+              "fareBasis": "UTCLO",
+              "brandedFare": "CL",
+              "brandedFareLabel": "ECOFLY",
+              "class": "U",
+              "includedCheckedBags": {
+                "weight": 0,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "1 PIECE X 8 KG CABIN BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL SERVICE",
+                  "isChargeable": False,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "STANDART SEAT SELECTION",
+                  "isChargeable": True,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ONLINE MESSAGE RIGHT",
+                  "isChargeable": False,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "5",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-23",
+      "lastTicketingDateTime": "2024-07-23",
+      "numberOfBookableSeats": 1,
+      "itineraries": [
+        {
+          "duration": "PT2H50M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "SAW",
+                "at": "2024-07-24T09:40:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "at": "2024-07-24T11:30:00"
+              },
+              "carrierCode": "PC",
+              "number": "1019",
+              "aircraft": {
+                "code": "321"
+              },
+              "operating": {
+                "carrierCode": "PC"
+              },
+              "duration": "PT2H50M",
+              "id": "7",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "90.08",
+        "base": "32.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "90.08"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": True
+      },
+      "validatingAirlineCodes": [
+        "PC"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "90.08",
+            "base": "32.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "7",
+              "cabin": "ECONOMY",
+              "fareBasis": "GOW1S",
+              "brandedFare": "EUROP",
+              "brandedFareLabel": "EUROP ESSENTIALS",
+              "class": "G",
+              "includedCheckedBags": {
+                "weight": 20,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "UPTO44LB 20KG BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPTO11LB 5KG BAGGAGE",
+                  "isChargeable": True,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CARRY8KG 18LB UPTO 45LI 115LCM",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "PRE RESERVED SEAT ASSIGNMENT",
+                  "isChargeable": True,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "2PCT MILES EARNED",
+                  "isChargeable": True,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "6",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-23",
+      "lastTicketingDateTime": "2024-07-23",
+      "numberOfBookableSeats": 1,
+      "itineraries": [
+        {
+          "duration": "PT2H50M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "SAW",
+                "at": "2024-07-24T13:40:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "at": "2024-07-24T15:30:00"
+              },
+              "carrierCode": "PC",
+              "number": "1021",
+              "aircraft": {
+                "code": "320"
+              },
+              "operating": {
+                "carrierCode": "PC"
+              },
+              "duration": "PT2H50M",
+              "id": "8",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "90.08",
+        "base": "32.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "90.08"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": True
+      },
+      "validatingAirlineCodes": [
+        "PC"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "90.08",
+            "base": "32.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "8",
+              "cabin": "ECONOMY",
+              "fareBasis": "GOW1S",
+              "brandedFare": "EUROP",
+              "brandedFareLabel": "EUROP ESSENTIALS",
+              "class": "G",
+              "includedCheckedBags": {
+                "weight": 20,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "UPTO44LB 20KG BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "UPTO11LB 5KG BAGGAGE",
+                  "isChargeable": True,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "CARRY8KG 18LB UPTO 45LI 115LCM",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "PRE RESERVED SEAT ASSIGNMENT",
+                  "isChargeable": True,
+                  "amenityType": "PRE_RESERVED_SEAT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "2PCT MILES EARNED",
+                  "isChargeable": True,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "7",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-24",
+      "lastTicketingDateTime": "2024-07-24",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT2H45M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "SAW",
+                "at": "2024-07-24T10:15:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "terminal": "1",
+                "at": "2024-07-24T12:00:00"
+              },
+              "carrierCode": "TK",
+              "number": "7738",
+              "aircraft": {
+                "code": "73H"
+              },
+              "duration": "PT2H45M",
+              "id": "3",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "113.67",
+        "base": "45.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "113.67"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": False
+      },
+      "validatingAirlineCodes": [
+        "TK"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "113.67",
+            "base": "45.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "3",
+              "cabin": "ECONOMY",
+              "fareBasis": "VLTSAJRO",
+              "brandedFare": "JR",
+              "brandedFareLabel": "ECOJET",
+              "class": "V",
+              "includedCheckedBags": {
+                "weight": 0,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "1 PIECE X 8 KG CABIN BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "flight-offer",
+      "id": "8",
+      "source": "GDS",
+      "instantTicketingRequired": False,
+      "nonHomogeneous": False,
+      "oneWay": False,
+      "isUpsellOffer": False,
+      "lastTicketingDate": "2024-07-24",
+      "lastTicketingDateTime": "2024-07-24",
+      "numberOfBookableSeats": 9,
+      "itineraries": [
+        {
+          "duration": "PT2H40M",
+          "segments": [
+            {
+              "departure": {
+                "iataCode": "IST",
+                "at": "2024-07-24T07:20:00"
+              },
+              "arrival": {
+                "iataCode": "MUC",
+                "terminal": "1",
+                "at": "2024-07-24T09:00:00"
+              },
+              "carrierCode": "TK",
+              "number": "1629",
+              "aircraft": {
+                "code": "332"
+              },
+              "operating": {
+                "carrierCode": "TK"
+              },
+              "duration": "PT2H40M",
+              "id": "2",
+              "numberOfStops": 0,
+              "blacklistedInEU": False
+            }
+          ]
+        }
+      ],
+      "price": {
+        "currency": "EUR",
+        "total": "128.67",
+        "base": "55.00",
+        "fees": [
+          {
+            "amount": "0.00",
+            "type": "SUPPLIER"
+          },
+          {
+            "amount": "0.00",
+            "type": "TICKETING"
+          }
+        ],
+        "grandTotal": "128.67"
+      },
+      "pricingOptions": {
+        "fareType": [
+          "PUBLISHED"
+        ],
+        "includedCheckedBagsOnly": False
+      },
+      "validatingAirlineCodes": [
+        "TK"
+      ],
+      "travelerPricings": [
+        {
+          "travelerId": "1",
+          "fareOption": "STANDARD",
+          "travelerType": "ADULT",
+          "price": {
+            "currency": "EUR",
+            "total": "128.67",
+            "base": "55.00"
+          },
+          "fareDetailsBySegment": [
+            {
+              "segmentId": "2",
+              "cabin": "ECONOMY",
+              "fareBasis": "VTCLO",
+              "brandedFare": "CL",
+              "brandedFareLabel": "ECOFLY",
+              "class": "V",
+              "includedCheckedBags": {
+                "weight": 0,
+                "weightUnit": "KG"
+              },
+              "amenities": [
+                {
+                  "description": "1 PIECE X 8 KG CABIN BAGGAGE",
+                  "isChargeable": False,
+                  "amenityType": "BAGGAGE",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "MEAL SERVICE",
+                  "isChargeable": False,
+                  "amenityType": "MEAL",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "STANDART SEAT SELECTION",
+                  "isChargeable": True,
+                  "amenityType": "BRANDED_FARES",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                },
+                {
+                  "description": "ONLINE MESSAGE RIGHT",
+                  "isChargeable": False,
+                  "amenityType": "ENTERTAINMENT",
+                  "amenityProvider": {
+                    "name": "BrandedFare"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "dictionaries": {
+    "locations": {
+      "SAW": {
+        "cityCode": "IST",
+        "countryCode": "TR"
+      },
+      "MUC": {
+        "cityCode": "MUC",
+        "countryCode": "DE"
+      },
+      "IST": {
+        "cityCode": "IST",
+        "countryCode": "TR"
+      }
+    },
+    "aircraft": {
+      "320": "AIRBUS A320",
+      "321": "AIRBUS A321",
+      "332": "AIRBUS A330-200",
+      "333": "AIRBUS A330-300",
+      "73H": "BOEING 737-800 (WINGLETS)",
+      "73J": "BOEING 737-900"
+    },
+    "currencies": {
+      "EUR": "EURO"
+    },
+    "carriers": {
+      "PC": "PEGASUS AIRLINES",
+      "TK": "TURKISH AIRLINES"
+    }
+  }
+}

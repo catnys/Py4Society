@@ -1,6 +1,6 @@
 from datetime import datetime
 
-from TravelClass import TravelClass
+from travel_class import TravelClass
 
 
 class Flight:
