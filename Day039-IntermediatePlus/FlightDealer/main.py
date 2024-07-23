@@ -87,6 +87,10 @@ def retrieveCities(filename="base_price_data.csv"):
     # Return the list of city names
     return cityNames
 
+def getIATA(cityList):
+    """Function to retrieve IATA"""
+
+
 def main():
     """Main function"""
     # Retrieve city names and store them in a variable
@@ -98,6 +102,3 @@ def main():
 if __name__ == "__main__":
     main()
 
-
-if __name__ == "__main__":
-    main()
