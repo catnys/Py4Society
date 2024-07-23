@@ -25,23 +25,41 @@ def getBearerToken():
     return token
 
 
+def displayFlightPrices(data):
+    # Access the 'data' array from the JSON response
+    flightOffers = data.get('data', [])
+
+    for offer in flightOffers:
+        # Extract price and currency information
+        priceInfo = offer.get('price', {})
+        totalPrice = priceInfo.get('total', 'N/A')
+        currency = priceInfo.get('currency', 'N/A')
+
+        print(f"Flight Offer ID: {offer['id']}, Price: {totalPrice} {currency}")
+
 AMADEUS_ACCESS_TOKEN = getBearerToken()
 
 
-flight = Flight(originLocationCode="IST", destinationLocationCode="MUC", departureDate="2024-07-24")
+flight = Flight(originLocationCode="IST", destinationLocationCode="LAX", departureDate="2024-07-24")
 print(flight)
 
 
-headers = {'Authorization': 'Bearer ' + AMADEUS_ACCESS_TOKEN}
+# Header with content type as per Amadeus documentation
+header = {
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'Authorization': 'Bearer ' + AMADEUS_ACCESS_TOKEN
+}
 
 parameters = {
     'originLocationCode': flight.getOriginLocationCode(),
     'destinationLocationCode': flight.getDestinationLocationCode(),
     'departureDate': flight.getDepartureDate(),
-    'adults': flight.getAdults(),
-    'nonStop': flight.getNonStop(),
+    'adults': flight.getAdults()
 }
 
-response = requests.get(url=CURRENT_ENDPOINT, params=parameters, headers=headers)
-print(response.json())
+response = requests.get(url=CURRENT_ENDPOINT, params=parameters, headers=header)
+data = response.json()
+print(data)
+print("-----\n")
+displayFlightPrices(data)
 
