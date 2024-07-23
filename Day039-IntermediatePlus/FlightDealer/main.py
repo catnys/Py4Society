@@ -6,27 +6,21 @@ AMADEUS_API_SECRET = '<your-api-secret>'
 AMADEUS_BASE = "https://test.api.amadeus.com/v2"
 AMADEUS_FLIGHT_OFFERS_ENDPOINT = "/shopping/flight-offers"
 
-
-
 CURRENT_ENDPOINT = AMADEUS_BASE + AMADEUS_FLIGHT_OFFERS_ENDPOINT
 
 ############
 
 
 # Auth
-AUTH_ENDPOINT = "https://test.api.amadeus.com/v1/security/oauth2/token/"
+AUTH_URL = "https://test.api.amadeus.com/v1/security/oauth2/token"
 
-headers = {
-    'Content-Type': 'application/x-www-form-urlencoded'
-}
-
-authParams = {
+body = {
     'grant_type': 'client_credentials',
     'client_id': AMADEUS_API_KEY,
     'client_secret': AMADEUS_API_SECRET,
 }
 
-response = requests.post(url=AUTH_ENDPOINT, headers=headers, data=authParams)
+response = requests.post(url=AUTH_URL, data=body)
 print(response.json())
 
 """
