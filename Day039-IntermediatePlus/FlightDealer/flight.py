@@ -7,7 +7,7 @@ class Flight:
     def __init__(self, originLocationCode: str, destinationLocationCode: str, departureDate: str,
                  returnDate: str = None, adults: int = 1, children: int = None, travelClass: TravelClass = None,
                  currencyCode: str = None, maxPrice: int = None) -> None:
-        if not originLocationCode or not destinationLocationCode or not departureDate or not returnDate:
+        if not originLocationCode or not destinationLocationCode or not departureDate or not adults:
             raise TypeError(
                 "Compulsory parameters (originLocationCode, destinationLocationCode, departureDate, returnDate) must be provided.")
 
