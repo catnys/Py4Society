@@ -92,15 +92,18 @@ def retrieveCities(filename="base_price_data.csv"):
 
 
 def getIATA(cityNames):
-    """Function to retrieve IATA"""
-    token = "nMMOUkr1eCx2sfHMpF4qfjHLi3uv" # getBearerToken()
+    """Function to retrieve IATA codes for given city names."""
+    token = getBearerToken()
 
     headers = {
         'Authorization': "Bearer " + token
     }
 
+    # Initialize an empty dictionary to store city-IATA pairs
+    city_iata_dict = {}
+
     for cityName in cityNames:
-        print(cityName)
+        print(f"Processing {cityName}")
 
         parameters = {
             "keyword": cityName
@@ -109,14 +112,40 @@ def getIATA(cityNames):
         # Make the API call
         response = requests.get(url=AMADEUS_CITIES_ENDPOINT, params=parameters, headers=headers)
         data = response.json()
-        print(data)
+
+        # Check if the response contains data
+        if 'data' in data and len(data['data']) > 0:
+            # Extract IATA codes for the city
+            iata_codes = [item['iataCode'] for item in data['data'] if item['name'].lower() == cityName.lower()]
+
+            # Check if the city is already in the dictionary
+            if cityName in city_iata_dict:
+                # Update existing IATA codes with new ones
+                city_iata_dict[cityName].extend(iata_codes)
+            else:
+                # Add new city with its IATA codes
+                city_iata_dict[cityName] = iata_codes
+        else:
+            print(f"No data found for {cityName}")
+
+    # Convert the dictionary to a list of dictionaries
+    city_iata_list = [{"city": k, "iata": v} for k, v in city_iata_dict.items()]
+
+    return city_iata_list
 
 def main():
     """Main function"""
-    # Retrieve city names and store them in a variable
-    cities = retrieveCities()
+    # Retrieve city names from a CSV file
+    cityNames = retrieveCities("base_price_data.csv")
 
-    getIATA(cities)
+    # Fetch IATA codes for the retrieved city names
+    city_iata_list = getIATA(cityNames)
+
+    # Print the list of cities and their IATA codes
+    print(city_iata_list)
+
+if __name__ == "__main__":
+    main()
 
 
 
