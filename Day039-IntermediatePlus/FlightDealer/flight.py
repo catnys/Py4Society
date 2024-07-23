@@ -6,7 +6,7 @@ from TravelClass import TravelClass
 class Flight:
     def __init__(self, originLocationCode: str, destinationLocationCode: str, departureDate: str,
                  returnDate: str = None, adults: int = 1, children: int = None, travelClass: TravelClass = None,
-                 currencyCode: str = None, maxPrice: int = None) -> None:
+                 currencyCode: str = None, maxPrice: int = None, nonStop: bool = None) -> None:
         if not originLocationCode or not destinationLocationCode or not departureDate or not adults:
             raise TypeError(
                 "Compulsory parameters (originLocationCode, destinationLocationCode, departureDate, returnDate) must be provided.")
@@ -20,6 +20,7 @@ class Flight:
         self.travelClass = travelClass
         self.currencyCode = currencyCode
         self.maxPrice = maxPrice
+        self.nonStop = nonStop
 
     def __str__(self) -> str:
         return f"Flight from {self.originLocationCode} to {self.destinationLocationCode}, departing on {self.departureDate} and returning on {self.returnDate}. Adults: {self.adults}, Children: {self.children}, Travel Class: {self.travelClass}, Currency: {self.currencyCode}, Max Price: {self.maxPrice}"
@@ -119,3 +120,9 @@ class Flight:
 
     def setMaxPrice(self, maxPrice):
         self.maxPrice = maxPrice
+
+    def getNonStop(self):
+        return self.nonStop
+
+    def setNonStop(self, nonStop):
+        self.nonStop = nonStop
