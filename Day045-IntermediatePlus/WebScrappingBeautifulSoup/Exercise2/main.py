@@ -7,6 +7,7 @@ with open("website.html") as file:
 
 soup = BeautifulSoup(content, "html.parser")
 
-form_tag = soup.find("form")
+form_tag = soup.find("input")
 max_len = form_tag.get("maxlength")
 print(form_tag)
+print(max_len)
