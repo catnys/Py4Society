@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change beforePath="$PROJECT_DIR$/Day051-IntermediatePlus/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day051-IntermediatePlus/README.md" afterDir="false" />
-    </list>
+    <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +61,7 @@
     "Python.user.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day048-IntermediatePlus/SeleniumProject",
+    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day049-IntermediatePlus/LinkedInProject",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -75,11 +73,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day049-IntermediatePlus/LinkedInProject" />
       <recent name="$PROJECT_DIR$/Day048-IntermediatePlus/SeleniumProject" />
       <recent name="$PROJECT_DIR$/Day045-IntermediatePlus/100MovieList" />
       <recent name="$PROJECT_DIR$/Day041-IntermediatePlus" />
       <recent name="$PROJECT_DIR$/Day041-IntermediatePlus/Resources" />
-      <recent name="$PROJECT_DIR$/Day044-IntermediatePlus/Stuff" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day045-IntermediatePlus" />
