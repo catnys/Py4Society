@@ -1,6 +1,5 @@
 # `Day 45 - Intermediate+`
 
-
 # Web Scraping in Python
 
 Web scraping is the process of extracting information from websites. It involves making requests to web pages, downloading the HTML content, parsing it to extract useful information, and then storing or using that information in various ways. Python, with its rich ecosystem of libraries, is a popular choice for web scraping due to its simplicity and efficiency.
