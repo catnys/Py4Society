@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change beforePath="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/server.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/static/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/templates/curriculumvitae.html" beforeDir="false" afterPath="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/templates/curriculumvitae.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +19,7 @@
       <list>
         <option value="Python Script" />
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -67,6 +70,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day050-IntermediatePlus/TinderBotSolution",
+    "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -85,11 +89,11 @@
       <recent name="$PROJECT_DIR$/Day041-IntermediatePlus" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/static" />
       <recent name="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/templates" />
       <recent name="$PROJECT_DIR$/Day045-IntermediatePlus" />
       <recent name="$PROJECT_DIR$/Day045-IntermediatePlus/WebScrappingBeautifulSoup/Exercise1" />
       <recent name="$PROJECT_DIR$/Day042-IntermediatePlus/Resources" />
-      <recent name="$PROJECT_DIR$/Day043-IntermediatePlus/Stuff" />
     </key>
   </component>
   <component name="RunManager" selected="Python.server">
