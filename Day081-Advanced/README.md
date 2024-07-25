@@ -1,6 +1,5 @@
 # `Day 81 - Advanced`
 
-
 Welcome to Boston Massachusetts in the 1970s! Imagine you're working for a real estate development company. Your company wants to value any residential project before they start. You are tasked with building a model that can provide a price estimate based on a home's characteristics like:
 
 1. The number of rooms
