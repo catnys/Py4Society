@@ -1,5 +1,8 @@
 # `Day 74 - Advanced`
 
+
+## Objectives:
+
 ```
 In this lesson we looked at how to:
 
