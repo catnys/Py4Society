@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin" />
+    <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
+      <change beforePath="$PROJECT_DIR$/Day069-Advanced/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day069-Advanced/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -65,7 +67,7 @@
     "Python.user.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day064-Advanced",
+    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day071-Advanced/BlogDeployment",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -78,11 +80,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day071-Advanced/BlogDeployment" />
       <recent name="$PROJECT_DIR$/Day064-Advanced" />
       <recent name="$PROJECT_DIR$/Day065-Advanced" />
       <recent name="$PROJECT_DIR$/Day063-Advanced/Soln" />
       <recent name="$PROJECT_DIR$/Day062-Advanced/CoffeeAndWifiEnds" />
-      <recent name="$PROJECT_DIR$/Day061-Advanced/FlaskApp" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day056-IntermediatePlus/PersonalCard/static" />
