@@ -53,6 +53,65 @@ if name == 'main': app.run(debug=True)
 
 In this example, we define a route `/api/data` that responds to GET requests with a JSON message.
 
+# `Practice` Example
+
+```
+from flask import Flask, jsonify, request
+
+app = Flask(__name__)
+
+# Mock database
+books = {
+    'book1': {'title': 'Book One', 'author': 'Author One'},
+    'book2': {'title': 'Book Two', 'author': 'Author Two'}
+}
+
+# Route for getting all books
+@app.route('/api/books', methods=['GET'])
+def get_books():
+    return jsonify(books)
+
+# Route for getting a book by ID
+@app.route('/api/books/<string:book_id>', methods=['GET'])
+def get_book(book_id):
+    return jsonify(books[book_id])
+
+# Route for adding a new book
+@app.route('/api/books', methods=['POST'])
+def add_book():
+    new_book = request.json
+    books[new_book['id']] = new_book
+    return jsonify(new_book), 201
+
+# Route for updating a book
+@app.route('/api/books/<string:book_id>', methods=['PUT'])
+def update_book(book_id):
+    updated_book = request.json
+    books[book_id] = updated_book
+    return jsonify(updated_book)
+
+# Route for deleting a book
+@app.route('/api/books/<string:book_id>', methods=['DELETE'])
+def delete_book(book_id):
+    del books[book_id]
+    return '', 204
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+```
+
+## Testing the Endpoints:
+Here are some cURL commands to test the endpoints:
+
+1. Get all books: curl http://127.0.0.1:5000/api/books
+2. Add a new book: curl -X POST -H "Content-Type: application/json" -d '{"id":"book3","title":"Book Three","author":"Author Three"}' http://127.0.0.1:5000/api/books
+3. Get a specific book: curl http://127.0.0.1:5000/api/books/book3
+4. Update a book: curl -X PUT -H "Content-Type: application/json" -d '{"title":"Updated Book Title","author":"Updated Author Name"}' http://127.0.0.1:5000/api/books/book3
+5. Delete a book: curl -X DELETE http://127.0.0.1:5000/api/books/book3
+
 # Summary
 
 REST APIs are a fundamental part of modern web development, enabling different software systems to communicate over the web. Python, with its simplicity and powerful libraries, is an excellent choice for both consuming and building RESTful services. Whether you're sending requests to external APIs or developing your own RESTful web services, Python offers the tools necessary to achieve these tasks efficiently.
+
+
