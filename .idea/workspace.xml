@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change beforePath="$PROJECT_DIR$/Day079-Advanced/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day079-Advanced/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day081-Advanced/PredictHousePrices/Multivariable_Regression_and_Valuation_Model_(complete).ipynb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day081-Advanced/PredictHousePrices/boston.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Day081-Advanced/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Day081-Advanced/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +69,7 @@
     "Python.user.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day078-Advanced/SeabornLinearRegression",
+    "last_opened_file_path": "/Users/Burak.Kaya/Documents/github/Py4Society/Day081-Advanced/PredictHousePrices",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -80,11 +82,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Day081-Advanced/PredictHousePrices" />
+      <recent name="$PROJECT_DIR$/Day080-Advanced/Soln" />
+      <recent name="$PROJECT_DIR$/Day079-Advanced/Soln" />
       <recent name="$PROJECT_DIR$/Day078-Advanced/SeabornLinearRegression" />
       <recent name="$PROJECT_DIR$/Day077-Advanced/Solution" />
-      <recent name="$PROJECT_DIR$/Day076-Advanced/PlayStore" />
-      <recent name="$PROJECT_DIR$/Day075-Advanced/GoogleTrends" />
-      <recent name="$PROJECT_DIR$/Day072-Advanced" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Day074-Advanced" />
