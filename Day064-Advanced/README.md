@@ -34,6 +34,25 @@ When developing APIs with Flask, it's important to adhere to best practices to e
 - **Authentication and Security**: Secure your API endpoints using authentication methods like OAuth or JWT tokens. Always validate and sanitize inputs to protect against injection attacks.
 - **Documentation**: Document your API endpoints, request/response formats, and error codes. Tools like Swagger can automate this process, making your API more accessible to other developers.
 
+## Simplest Example
+
+```
+from flask import Flask, jsonify
+
+app = Flask(__name__)
+
+@app.route('/api/data', methods=['GET'])
+def get_data():
+    data = {
+        "message": "Welcome to LocalHostAPI!",
+        "status": "success"
+    }
+    return jsonify(data)
+
+if __name__ == '__main__':
+    app.run(debug=True)
+
+```
 ## Conclusion
 
 Flask is a powerful yet simple tool for developing web applications and APIs. Its flexibility and ease of use make it an attractive option for a wide range of projects, from small prototypes to large-scale applications. By following best practices, you can build robust, secure, and scalable APIs with Flask.
