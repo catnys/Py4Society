@@ -1,4 +1,4 @@
-from player import Player
+from player import Box
 
 """Tic Tac Toe Project"""
 
@@ -13,22 +13,28 @@ from player import Player
 "-------|-------|-------"
 
 boardArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+empty_board = [' '] * 9
 
 
-def displayBoard():
+def displayBoard(boardArray):
     # init vars
     horizontal = "-------"
     vertical = "|"
-    space = "       "
+    index = 0
     isSpace = False
-
 
     for row in range(7):
         for i in range(3):
-            print(space, end="") if isSpace else print(horizontal, end="")
+            if isSpace:
+                space = f"   {boardArray[index]}   "
+                print(space, end="")
+                index += 1
+            else:
+                print(horizontal, end="")
             if i != 2: print(vertical, end="")
         print()  # Move to the next line after printing the row
+
         isSpace = not isSpace  # Toggle the value of isSpace at the end of each row iteration
 
 
-displayBoard()
+displayBoard(boardArray)
