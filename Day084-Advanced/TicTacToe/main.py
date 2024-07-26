@@ -1,3 +1,5 @@
+from player import Player
+
 """Tic Tac Toe Project"""
 
 # Print Board
@@ -10,6 +12,7 @@
 "   G   |   H   |   I   "
 "-------|-------|-------"
 
+boardArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 
 # Set Walls - Wunderbar :)
 def setRP(isSpace):
