@@ -12,9 +12,16 @@ from box import Box
 "   G   |   H   |   I   "
 "-------|-------|-------"
 
+
 boardArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 empty_board = [' '] * 9
 
+
+
+def initBoardArray():
+    boardArray = []
+    for i in range(9):
+        square = Box
 
 def displayBoard(boardArray):
     # init vars

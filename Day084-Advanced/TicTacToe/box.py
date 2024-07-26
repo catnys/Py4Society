@@ -1,13 +1,13 @@
 class Box:
-    def __init__(self, type: str,isEmpty = True):
-        self.type = type
+    def __init__(self, letter: str = None,isEmpty = True):
+        self.letter = letter
         self.isEmpty = isEmpty
 
-    def getType(self):
-        return self.type
+    def getLetter(self):
+        return self.letter
 
-    def setType(self, type):
-        self.type = type
+    def setLetter(self, letter):
+        self.letter = letter
 
     def setIsEmpty(self, isEmpty):
         self.isEmpty = isEmpty
