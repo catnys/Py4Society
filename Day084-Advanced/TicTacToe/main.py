@@ -13,7 +13,7 @@ from box import Box
 "-------|-------|-------"
 
 
-boardArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+boardArrayNumeric = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
 empty_board = [' '] * 9
 
 
@@ -21,7 +21,13 @@ empty_board = [' '] * 9
 def initBoardArray():
     boardArray = []
     for i in range(9):
-        square = Box
+        square = Box(" ",True)
+        boardArray.append(square)
+    return boardArray
+
+
+
+
 
 def displayBoard(boardArray):
     # init vars
@@ -33,7 +39,7 @@ def displayBoard(boardArray):
     for row in range(7):
         for i in range(3):
             if isSpace:
-                space = f"   {boardArray[index]}   "
+                space = f"   { boardArray[index].getLetter() if boardArray[index].getLetter() != ' ' else boardArrayNumeric[i]}   "
                 print(space, end="")
                 index += 1
             else:
@@ -43,5 +49,5 @@ def displayBoard(boardArray):
 
         isSpace = not isSpace  # Toggle the value of isSpace at the end of each row iteration
 
-
+boardArray = initBoardArray()
 displayBoard(boardArray)
