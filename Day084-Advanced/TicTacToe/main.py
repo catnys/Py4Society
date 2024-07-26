@@ -14,15 +14,10 @@ from player import Player
 "-------|-------|-------"
 
 
-boardArrayNumeric = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
-empty_board = [' '] * 9
-
-
-
 def initBoardArray():
     boardArray = []
     for i in range(9):
-        square = Box(" ",True)
+        square = Box(defaultValue=str(i+1))
         boardArray.append(square)
     return boardArray
 
@@ -43,7 +38,7 @@ def displayBoard(boardArray):
     for row in range(7):
         for i in range(3):
             if isSpace:
-                space = f"   { boardArray[index].getLetter() if boardArray[index].getLetter() != ' ' else boardArrayNumeric[index]}   "
+                space = f"   { boardArray[index].getLetter() if not boardArray[index].getDefaultValue().isnumeric() else boardArray[index].getDefaultValue()}   "
                 print(space, end="")
                 index += 1
             else:
