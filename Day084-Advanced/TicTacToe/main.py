@@ -1,19 +1,20 @@
 from box import Box
+from player import Player
 
 """Tic Tac Toe Project"""
 
 # Print Board
 
 "-------|-------|-------"
-"   A   |   B   |   C   "
+"   1   |   2   |   3   "
 "-------|-------|-------"
-"   D   |   E   |   F   "
+"   4   |   5   |   6   "
 "-------|-------|-------"
-"   G   |   H   |   I   "
+"   7   |   8   |   9   "
 "-------|-------|-------"
 
 
-boardArrayNumeric = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I']
+boardArrayNumeric = ['1', '2', '3', '4', '5', '6', '7', '8', '9']
 empty_board = [' '] * 9
 
 
@@ -26,7 +27,10 @@ def initBoardArray():
     return boardArray
 
 
-
+def updateBoardArray(boardArray, player: Player, index: int):
+    for i in range(9):
+        if index == i:
+            boardArray[i].letter = player.getSymbol()
 
 
 def displayBoard(boardArray):
@@ -39,7 +43,7 @@ def displayBoard(boardArray):
     for row in range(7):
         for i in range(3):
             if isSpace:
-                space = f"   { boardArray[index].getLetter() if boardArray[index].getLetter() != ' ' else boardArrayNumeric[i]}   "
+                space = f"   { boardArray[index].getLetter() if boardArray[index].getLetter() != ' ' else boardArrayNumeric[index]}   "
                 print(space, end="")
                 index += 1
             else:
@@ -49,5 +53,10 @@ def displayBoard(boardArray):
 
         isSpace = not isSpace  # Toggle the value of isSpace at the end of each row iteration
 
+p1 = Player("X")
+p2 = Player("O")
+
 boardArray = initBoardArray()
+updateBoardArray(boardArray, p1, 1)
+updateBoardArray(boardArray, p2, 5)
 displayBoard(boardArray)
