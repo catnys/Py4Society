@@ -1,4 +1,4 @@
-from player import Box
+from box import Box
 
 """Tic Tac Toe Project"""
 

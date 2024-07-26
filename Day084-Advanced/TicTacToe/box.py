@@ -1,7 +1,7 @@
 class Box:
-    def __init__(self, type: str,isFilled = False):
+    def __init__(self, type: str,isEmpty = True):
         self.type = type
-        self.isFilled = isFilled
+        self.isEmpty = isEmpty
 
     def getType(self):
         return self.type
@@ -9,9 +9,9 @@ class Box:
     def setType(self, type):
         self.type = type
 
-    def setIsFilled(self, isFilled):
-        self.isFilled = isFilled
+    def setIsEmpty(self, isEmpty):
+        self.isEmpty = isEmpty
 
-    def getIsFilled(self):
-        return self.isFilled
+    def getIsEmpty(self):
+        return self.isEmpty
 
