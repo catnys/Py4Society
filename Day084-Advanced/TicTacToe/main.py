@@ -10,6 +10,7 @@
 "   G   |   H   |   I   "
 "-------|-------|-------"
 
+
 # Set Walls - Wunderbar :)
 def setRP(isSpace):
     horizontal = "-------"
@@ -21,8 +22,8 @@ def setRP(isSpace):
         if i != 2: print(vertical, end="")
     print()  # Move to the next line after printing the row
 
-def printBoard():
 
+def printBoard():
     isSpace = False  # Initial state
 
     for row in range(7):
