@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Facts</title>
+</head>
+<body>
+    <h1>Random Food Facts</h1>
+    <button onclick="fetchFacts()">Get Facts</button>
+    <div id="facts"></div>
+
+    <script>
+        function fetchFacts() {
+            fetch('/get_food_facts')
+                .then(response => response.json())
+                .then(data => {
+                    const factsDiv = document.getElementById('facts');
+                    // Clear existing facts
+                    factsDiv.innerHTML = '';
+                    // Display each fact
+                    data.forEach(fact => {
+                        const p = document.createElement('p');
+                        p.innerText = `${fact.food_name}: ${fact.description}`;
+                        factsDiv.appendChild(p);
+                    });
+                });
+        }
+    </script>
+</body>
+</html>
