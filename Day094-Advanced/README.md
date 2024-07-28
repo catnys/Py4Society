@@ -10,5 +10,3 @@ Before starting, ensure you have Selenium installed. If not, you can install it 
 pip install selenium
 ```
 
-
-
