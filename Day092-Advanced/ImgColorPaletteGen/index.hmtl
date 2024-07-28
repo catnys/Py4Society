@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Color Analyzer</title>
+</head>
+<body>
+    <h1>Image Color Analyzer</h1>
+    <form action="/analyze" method="post" enctype="multipart/form-data">
+        <input type="file" name="image" accept="image/*">
+        <button type="submit">Analyze Colors</button>
+    </form>
+</body>
+</html>
