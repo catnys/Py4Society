@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Harry Potter Fact</title>
+</head>
+<body>
+    <h1>Random Harry Potter Character Fact</h1>
+    <button onclick="fetchFact()">Get Fact</button>
+    <p id="fact"></p>
+
+    <script>
+        function fetchFact() {
+            fetch('/get_character_fact')
+                .then(response => response.text())
+                .then(data => document.getElementById('fact').innerText = data);
+        }
+    </script>
+</body>
+</html>
