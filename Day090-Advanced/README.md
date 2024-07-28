@@ -8,7 +8,6 @@ One of the most interesting solutions to this is a web app called The Most Dange
 A timer will count down and when the website detects the user has not written anything in the last 5/10 seconds, it will delete all the text they've written so far.
 
 Try it out here:
-
 https://www.squibler.io/dangerous-writing-prompt-app
 
 You are going to build a desktop app that has similar functionality. 
