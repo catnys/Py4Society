@@ -1,7 +1,8 @@
 # `Day 93 - Advanced`
 
 
-## `Objective`
+## `Objective` : Custom Web Scraper
 
--Objective HERE-
+Build a custom web scraper to collect data on things that you are interested in.
+
 
