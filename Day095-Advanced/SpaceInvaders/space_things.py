@@ -8,7 +8,7 @@ high_score = 0
 
 # Screen Setup
 win = turtle.Screen()
-win.title("Space Invaders")
+win.title("Advanced Space Invaders")
 win.bgcolor("black")
 win.setup(width=600, height=600)
 win.tracer(0)  # Turns off the screen updates
@@ -34,6 +34,16 @@ for i in range(6):
     y = 210
     enemy.goto(x, y)
     aliens.append(enemy)
+
+# Scoreboard
+scoreboard = turtle.Turtle()
+scoreboard.speed(0)
+scoreboard.shape("square")
+scoreboard.color("white")
+scoreboard.penup()
+scoreboard.hideturtle()
+scoreboard.goto(0, 250)
+scoreboard.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Arial", 24, "normal"))
 
 # Functionality
 def move_left():
@@ -82,13 +92,16 @@ win.onkeypress(move_down, "s")
 
 # Main Gameplay
 while True:
-    for alien in aliens:
+    for alien in aliens[:]:
         move_towards_ship(alien)
         (collision,) = check_collision(ship, alien)
         if collision:
             time.sleep(1)
             ship.hideturtle()
             alien.hideturtle()
+            aliens.remove(alien)
+            scoreboard.clear()
+            scoreboard.write("Score: {} High Score: {}".format(score, high_score), align="center", font=("Arial", 24, "normal"))
             break
     win.update()
     time.sleep(delay)
