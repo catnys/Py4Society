@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a0a34a2c-d527-4517-a37d-9b59d324ec59" name="Changes" comment="pull from origin">
-      <change afterPath="$PROJECT_DIR$/Day092-Advanced/ImgColorPaletteGen/index.hmtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day092-Advanced/ImgColorPaletteGen/server.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +122,7 @@
       <workItem from="1720722109676" duration="6934000" />
       <workItem from="1721513337486" duration="1879000" />
       <workItem from="1721515230133" duration="5801000" />
-      <workItem from="1722164625488" duration="6126000" />
+      <workItem from="1722164625488" duration="6184000" />
     </task>
     <task id="LOCAL-00001" summary="pull from origin">
       <option name="closed" value="true" />
