@@ -15,7 +15,16 @@ import os
 "-------|-------|-------"
 
 
+def clearScreen():
+    # Set the TERM environment variable to a common terminal type
+    os.environ['TERM'] = 'xterm'
+
+    # Now attempt to clear the screen
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
 def initBoardArray():
+    """Initializes boardArray and returns it"""
     boardArray = []
     for i in range(9):
         square = Box(letter=str(i + 1))
@@ -24,12 +33,14 @@ def initBoardArray():
 
 
 def reserveIndex(boardArray, player: Player, index: int):
+    """ Reserves the blocks inside the board according to the Player"""
     for i in range(9):
         if index == i:
             boardArray[i].setLetter(player.getSymbol())
 
 
 def displayBoard(boardArray):
+    """Displays the boardArray"""
     # init vars
     horizontal = "-------"
     vertical = "|"
@@ -51,6 +62,7 @@ def displayBoard(boardArray):
 
 
 def hasEmptyPlaces(boardArray):
+    """Chacks if the board has empty spaces"""
     for box in boardArray:
         if box.getLetter().isnumeric():  # Check if the letter is numeric (i.e., an unmarked space)
             return True  # Return True as soon as an empty place is found
@@ -99,10 +111,11 @@ def playGame(player1: Player, player2: Player, boardArray):
 
         # Switch players
         currentPlayer = player2 if currentPlayer == player1 else player1
-        os.
+        clearScreen()
 
 
 def main():
+    """Main class to perform game operations"""
     p1 = Player("X")
     p2 = Player("O")
 
