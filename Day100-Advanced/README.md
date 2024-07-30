@@ -1,10 +1,5 @@
 # `Day 100 - Advanced`
 
-# 🎉
+# 🎉 Congratulations 
 
-## `Objective`
-
--Objective HERE-
-
-
-
+Congrats ! You (as cat) have just accomplished just finish off 100 days of bootcamp :3
