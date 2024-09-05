@@ -1,6 +1,5 @@
 # `Day 1 - Beginner`
 
-<!-- Table of Contents -->
 ## Table of Contents
 
 1. [Python Variable Naming Guide](#python-variable-naming-guide)
