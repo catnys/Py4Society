@@ -1,6 +1,6 @@
 # `Day 9 - Beginner`
 
-# 🌸 Lists 
+# Lists 
 
 ## Introduction to Python Lists
 
